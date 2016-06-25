@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-               BuildableName = "Ocular.app"
+               BuildableName = "Ocular-Tetris.app"
                BlueprintName = "Ocular-Tetris"
                ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular.app"
+            BuildableName = "Ocular-Tetris.app"
             BlueprintName = "Ocular-Tetris"
             ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular.app"
+            BuildableName = "Ocular-Tetris.app"
             BlueprintName = "Ocular-Tetris"
             ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular.app"
+            BuildableName = "Ocular-Tetris.app"
             BlueprintName = "Ocular-Tetris"
             ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
          </BuildableReference>

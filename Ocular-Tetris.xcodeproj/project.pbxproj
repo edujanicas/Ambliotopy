@@ -21,12 +21,52 @@
 		B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D271D1EBFB100F8FC88 /* Swiftris.swift */; };
 		B7270D331D1EBFB100F8FC88 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D281D1EBFB100F8FC88 /* TShape.swift */; };
 		B7270D341D1EBFB100F8FC88 /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D291D1EBFB100F8FC88 /* ZShape.swift */; };
+		B7C08E1E1D1F384B0069F376 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C08E1B1D1F38110069F376 /* ResearchKit.framework */; };
+		B7C08E1F1D1F384B0069F376 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C08E1B1D1F38110069F376 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023821D1EB23900D6C439 /* AppDelegate.swift */; };
 		B7F023871D1EB23900D6C439 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023861D1EB23900D6C439 /* GameScene.swift */; };
 		B7F023891D1EB23900D6C439 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023881D1EB23900D6C439 /* GameViewController.swift */; };
 		B7F0238C1D1EB23900D6C439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238A1D1EB23900D6C439 /* Main.storyboard */; };
 		B7F023911D1EB23900D6C439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238F1D1EB23900D6C439 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7C08E1A1D1F38110069F376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C08E141D1F38110069F376 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		B7C08E1C1D1F38110069F376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C08E141D1F38110069F376 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		B7C08E201D1F384B0069F376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C08E141D1F38110069F376 /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7C08E221D1F384B0069F376 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7C08E1F1D1F384B0069F376 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B7270D151D1EB34200F8FC88 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
@@ -44,6 +84,7 @@
 		B7270D281D1EBFB100F8FC88 /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		B7270D291D1EBFB100F8FC88 /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
 		B79042F31D1F29580005948E /* Ocular-Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ocular-Tetris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C08E141D1F38110069F376 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../../Downloads/ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
 		B7F023821D1EB23900D6C439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F023861D1EB23900D6C439 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B7F023881D1EB23900D6C439 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -57,15 +98,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C08E1E1D1F384B0069F376 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7C08E151D1F38110069F376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7C08E1B1D1F38110069F376 /* ResearchKit.framework */,
+				B7C08E1D1D1F38110069F376 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B7F023761D1EB23900D6C439 = {
 			isa = PBXGroup;
 			children = (
+				B7C08E141D1F38110069F376 /* ResearchKit.xcodeproj */,
 				B7F023811D1EB23900D6C439 /* Ocular-Tetris */,
 				B79042F31D1F29580005948E /* Ocular-Tetris.app */,
 			);
@@ -108,10 +160,12 @@
 				B7F0237B1D1EB23900D6C439 /* Sources */,
 				B7F0237C1D1EB23900D6C439 /* Frameworks */,
 				B7F0237D1D1EB23900D6C439 /* Resources */,
+				B7C08E221D1F384B0069F376 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B7C08E211D1F384B0069F376 /* PBXTargetDependency */,
 			);
 			name = "Ocular-Tetris";
 			productName = "Ocular-Tetris";
@@ -145,12 +199,35 @@
 			mainGroup = B7F023761D1EB23900D6C439;
 			productRefGroup = B7F023761D1EB23900D6C439;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B7C08E151D1F38110069F376 /* Products */;
+					ProjectRef = B7C08E141D1F38110069F376 /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B7F0237E1D1EB23900D6C439 /* Ocular-Tetris */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B7C08E1B1D1F38110069F376 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = B7C08E1A1D1F38110069F376 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7C08E1D1D1F38110069F376 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = B7C08E1C1D1F38110069F376 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B7F0237D1D1EB23900D6C439 /* Resources */ = {
@@ -190,6 +267,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7C08E211D1F384B0069F376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = B7C08E201D1F384B0069F376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B7F0238A1D1EB23900D6C439 /* Main.storyboard */ = {
@@ -301,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ocular;
@@ -313,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ocular;
