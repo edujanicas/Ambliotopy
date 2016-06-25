@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-               BuildableName = "Ocular-Tetris.app"
+               BuildableName = "Ocular.app"
                BlueprintName = "Ocular-Tetris"
                ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
             </BuildableReference>
@@ -28,32 +28,12 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7F023961D1EB23A00D6C439"
-               BuildableName = "Ocular-TetrisTests.xctest"
-               BlueprintName = "Ocular-TetrisTests"
-               ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B7F023A11D1EB23A00D6C439"
-               BuildableName = "Ocular-TetrisUITests.xctest"
-               BlueprintName = "Ocular-TetrisUITests"
-               ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular-Tetris.app"
+            BuildableName = "Ocular.app"
             BlueprintName = "Ocular-Tetris"
             ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
          </BuildableReference>
@@ -76,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular-Tetris.app"
+            BuildableName = "Ocular.app"
             BlueprintName = "Ocular-Tetris"
             ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
          </BuildableReference>
@@ -95,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular-Tetris.app"
+            BuildableName = "Ocular.app"
             BlueprintName = "Ocular-Tetris"
             ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
          </BuildableReference>

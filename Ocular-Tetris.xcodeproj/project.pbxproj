@@ -7,68 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7270D161D1EB34200F8FC88 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = B7270D151D1EB34200F8FC88 /* Sounds */; };
+		B7270D181D1EB35500F8FC88 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B7270D171D1EB35500F8FC88 /* Sprites.atlas */; };
+		B7270D1A1D1EB39900F8FC88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7270D191D1EB39900F8FC88 /* Images.xcassets */; };
+		B7270D2A1D1EBFB100F8FC88 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D1F1D1EBFB100F8FC88 /* Array2D.swift */; };
+		B7270D2B1D1EBFB100F8FC88 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D201D1EBFB100F8FC88 /* Block.swift */; };
+		B7270D2C1D1EBFB100F8FC88 /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D211D1EBFB100F8FC88 /* JShape.swift */; };
+		B7270D2D1D1EBFB100F8FC88 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D221D1EBFB100F8FC88 /* LineShape.swift */; };
+		B7270D2E1D1EBFB100F8FC88 /* LShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D231D1EBFB100F8FC88 /* LShape.swift */; };
+		B7270D2F1D1EBFB100F8FC88 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D241D1EBFB100F8FC88 /* Shape.swift */; };
+		B7270D301D1EBFB100F8FC88 /* SquareShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D251D1EBFB100F8FC88 /* SquareShape.swift */; };
+		B7270D311D1EBFB100F8FC88 /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D261D1EBFB100F8FC88 /* SShape.swift */; };
+		B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D271D1EBFB100F8FC88 /* Swiftris.swift */; };
+		B7270D331D1EBFB100F8FC88 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D281D1EBFB100F8FC88 /* TShape.swift */; };
+		B7270D341D1EBFB100F8FC88 /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D291D1EBFB100F8FC88 /* ZShape.swift */; };
 		B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023821D1EB23900D6C439 /* AppDelegate.swift */; };
-		B7F023851D1EB23900D6C439 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B7F023841D1EB23900D6C439 /* GameScene.sks */; };
 		B7F023871D1EB23900D6C439 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023861D1EB23900D6C439 /* GameScene.swift */; };
 		B7F023891D1EB23900D6C439 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023881D1EB23900D6C439 /* GameViewController.swift */; };
 		B7F0238C1D1EB23900D6C439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238A1D1EB23900D6C439 /* Main.storyboard */; };
-		B7F0238E1D1EB23900D6C439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238D1D1EB23900D6C439 /* Assets.xcassets */; };
 		B7F023911D1EB23900D6C439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238F1D1EB23900D6C439 /* LaunchScreen.storyboard */; };
-		B7F0239C1D1EB23A00D6C439 /* Ocular_TetrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0239B1D1EB23A00D6C439 /* Ocular_TetrisTests.swift */; };
-		B7F023A71D1EB23A00D6C439 /* Ocular_TetrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023A61D1EB23A00D6C439 /* Ocular_TetrisUITests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B7F023981D1EB23A00D6C439 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7F023771D1EB23900D6C439 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7F0237E1D1EB23900D6C439;
-			remoteInfo = "Ocular-Tetris";
-		};
-		B7F023A31D1EB23A00D6C439 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7F023771D1EB23900D6C439 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7F0237E1D1EB23900D6C439;
-			remoteInfo = "Ocular-Tetris";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		B7F0237F1D1EB23900D6C439 /* Ocular-Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ocular-Tetris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7270D151D1EB34200F8FC88 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		B7270D171D1EB35500F8FC88 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Sprites.atlas; path = ../Sprites.atlas; sourceTree = "<group>"; };
+		B7270D191D1EB39900F8FC88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B7270D1F1D1EBFB100F8FC88 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		B7270D201D1EBFB100F8FC88 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		B7270D211D1EBFB100F8FC88 /* JShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
+		B7270D221D1EBFB100F8FC88 /* LineShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		B7270D231D1EBFB100F8FC88 /* LShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LShape.swift; sourceTree = "<group>"; };
+		B7270D241D1EBFB100F8FC88 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		B7270D251D1EBFB100F8FC88 /* SquareShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareShape.swift; sourceTree = "<group>"; };
+		B7270D261D1EBFB100F8FC88 /* SShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
+		B7270D271D1EBFB100F8FC88 /* Swiftris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftris.swift; sourceTree = "<group>"; };
+		B7270D281D1EBFB100F8FC88 /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
+		B7270D291D1EBFB100F8FC88 /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		B79042F31D1F29580005948E /* Ocular-Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ocular-Tetris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F023821D1EB23900D6C439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7F023841D1EB23900D6C439 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		B7F023861D1EB23900D6C439 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B7F023881D1EB23900D6C439 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B7F0238B1D1EB23900D6C439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B7F0238D1D1EB23900D6C439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F023901D1EB23900D6C439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F023921D1EB23900D6C439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7F023971D1EB23A00D6C439 /* Ocular-TetrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ocular-TetrisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7F0239B1D1EB23A00D6C439 /* Ocular_TetrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocular_TetrisTests.swift; sourceTree = "<group>"; };
-		B7F0239D1D1EB23A00D6C439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7F023A21D1EB23A00D6C439 /* Ocular-TetrisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ocular-TetrisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7F023A61D1EB23A00D6C439 /* Ocular_TetrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocular_TetrisUITests.swift; sourceTree = "<group>"; };
-		B7F023A81D1EB23A00D6C439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B7F0237C1D1EB23900D6C439 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7F023941D1EB23A00D6C439 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7F0239F1D1EB23A00D6C439 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,53 +67,35 @@
 			isa = PBXGroup;
 			children = (
 				B7F023811D1EB23900D6C439 /* Ocular-Tetris */,
-				B7F0239A1D1EB23A00D6C439 /* Ocular-TetrisTests */,
-				B7F023A51D1EB23A00D6C439 /* Ocular-TetrisUITests */,
-				B7F023801D1EB23900D6C439 /* Products */,
+				B79042F31D1F29580005948E /* Ocular-Tetris.app */,
 			);
-			sourceTree = "<group>";
-		};
-		B7F023801D1EB23900D6C439 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B7F0237F1D1EB23900D6C439 /* Ocular-Tetris.app */,
-				B7F023971D1EB23A00D6C439 /* Ocular-TetrisTests.xctest */,
-				B7F023A21D1EB23A00D6C439 /* Ocular-TetrisUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B7F023811D1EB23900D6C439 /* Ocular-Tetris */ = {
 			isa = PBXGroup;
 			children = (
 				B7F023821D1EB23900D6C439 /* AppDelegate.swift */,
-				B7F023841D1EB23900D6C439 /* GameScene.sks */,
 				B7F023861D1EB23900D6C439 /* GameScene.swift */,
+				B7270D1F1D1EBFB100F8FC88 /* Array2D.swift */,
+				B7270D201D1EBFB100F8FC88 /* Block.swift */,
+				B7270D211D1EBFB100F8FC88 /* JShape.swift */,
+				B7270D221D1EBFB100F8FC88 /* LineShape.swift */,
+				B7270D231D1EBFB100F8FC88 /* LShape.swift */,
+				B7270D241D1EBFB100F8FC88 /* Shape.swift */,
+				B7270D251D1EBFB100F8FC88 /* SquareShape.swift */,
+				B7270D261D1EBFB100F8FC88 /* SShape.swift */,
+				B7270D271D1EBFB100F8FC88 /* Swiftris.swift */,
+				B7270D281D1EBFB100F8FC88 /* TShape.swift */,
+				B7270D291D1EBFB100F8FC88 /* ZShape.swift */,
 				B7F023881D1EB23900D6C439 /* GameViewController.swift */,
 				B7F0238A1D1EB23900D6C439 /* Main.storyboard */,
-				B7F0238D1D1EB23900D6C439 /* Assets.xcassets */,
 				B7F0238F1D1EB23900D6C439 /* LaunchScreen.storyboard */,
 				B7F023921D1EB23900D6C439 /* Info.plist */,
+				B7270D171D1EB35500F8FC88 /* Sprites.atlas */,
+				B7270D151D1EB34200F8FC88 /* Sounds */,
+				B7270D191D1EB39900F8FC88 /* Images.xcassets */,
 			);
 			path = "Ocular-Tetris";
-			sourceTree = "<group>";
-		};
-		B7F0239A1D1EB23A00D6C439 /* Ocular-TetrisTests */ = {
-			isa = PBXGroup;
-			children = (
-				B7F0239B1D1EB23A00D6C439 /* Ocular_TetrisTests.swift */,
-				B7F0239D1D1EB23A00D6C439 /* Info.plist */,
-			);
-			path = "Ocular-TetrisTests";
-			sourceTree = "<group>";
-		};
-		B7F023A51D1EB23A00D6C439 /* Ocular-TetrisUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B7F023A61D1EB23A00D6C439 /* Ocular_TetrisUITests.swift */,
-				B7F023A81D1EB23A00D6C439 /* Info.plist */,
-			);
-			path = "Ocular-TetrisUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,44 +115,8 @@
 			);
 			name = "Ocular-Tetris";
 			productName = "Ocular-Tetris";
-			productReference = B7F0237F1D1EB23900D6C439 /* Ocular-Tetris.app */;
+			productReference = B79042F31D1F29580005948E /* Ocular-Tetris.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B7F023961D1EB23A00D6C439 /* Ocular-TetrisTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B7F023AE1D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ocular-TetrisTests" */;
-			buildPhases = (
-				B7F023931D1EB23A00D6C439 /* Sources */,
-				B7F023941D1EB23A00D6C439 /* Frameworks */,
-				B7F023951D1EB23A00D6C439 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B7F023991D1EB23A00D6C439 /* PBXTargetDependency */,
-			);
-			name = "Ocular-TetrisTests";
-			productName = "Ocular-TetrisTests";
-			productReference = B7F023971D1EB23A00D6C439 /* Ocular-TetrisTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B7F023A11D1EB23A00D6C439 /* Ocular-TetrisUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B7F023B11D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ocular-TetrisUITests" */;
-			buildPhases = (
-				B7F0239E1D1EB23A00D6C439 /* Sources */,
-				B7F0239F1D1EB23A00D6C439 /* Frameworks */,
-				B7F023A01D1EB23A00D6C439 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B7F023A41D1EB23A00D6C439 /* PBXTargetDependency */,
-			);
-			name = "Ocular-TetrisUITests";
-			productName = "Ocular-TetrisUITests";
-			productReference = B7F023A21D1EB23A00D6C439 /* Ocular-TetrisUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -199,14 +130,7 @@
 				TargetAttributes = {
 					B7F0237E1D1EB23900D6C439 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					B7F023961D1EB23A00D6C439 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = B7F0237E1D1EB23900D6C439;
-					};
-					B7F023A11D1EB23A00D6C439 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = B7F0237E1D1EB23900D6C439;
+						DevelopmentTeam = 23REG7XS93;
 					};
 				};
 			};
@@ -219,13 +143,11 @@
 				Base,
 			);
 			mainGroup = B7F023761D1EB23900D6C439;
-			productRefGroup = B7F023801D1EB23900D6C439 /* Products */;
+			productRefGroup = B7F023761D1EB23900D6C439;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B7F0237E1D1EB23900D6C439 /* Ocular-Tetris */,
-				B7F023961D1EB23A00D6C439 /* Ocular-TetrisTests */,
-				B7F023A11D1EB23A00D6C439 /* Ocular-TetrisUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,24 +157,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F023851D1EB23900D6C439 /* GameScene.sks in Resources */,
+				B7270D161D1EB34200F8FC88 /* Sounds in Resources */,
+				B7270D1A1D1EB39900F8FC88 /* Images.xcassets in Resources */,
 				B7F023911D1EB23900D6C439 /* LaunchScreen.storyboard in Resources */,
-				B7F0238E1D1EB23900D6C439 /* Assets.xcassets in Resources */,
+				B7270D181D1EB35500F8FC88 /* Sprites.atlas in Resources */,
 				B7F0238C1D1EB23900D6C439 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7F023951D1EB23A00D6C439 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7F023A01D1EB23A00D6C439 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,42 +172,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */,
 				B7F023871D1EB23900D6C439 /* GameScene.swift in Sources */,
+				B7270D2A1D1EBFB100F8FC88 /* Array2D.swift in Sources */,
+				B7270D2B1D1EBFB100F8FC88 /* Block.swift in Sources */,
 				B7F023891D1EB23900D6C439 /* GameViewController.swift in Sources */,
+				B7270D2F1D1EBFB100F8FC88 /* Shape.swift in Sources */,
+				B7270D2E1D1EBFB100F8FC88 /* LShape.swift in Sources */,
+				B7270D2C1D1EBFB100F8FC88 /* JShape.swift in Sources */,
+				B7270D311D1EBFB100F8FC88 /* SShape.swift in Sources */,
 				B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7F023931D1EB23A00D6C439 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7F0239C1D1EB23A00D6C439 /* Ocular_TetrisTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7F0239E1D1EB23A00D6C439 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7F023A71D1EB23A00D6C439 /* Ocular_TetrisUITests.swift in Sources */,
+				B7270D341D1EBFB100F8FC88 /* ZShape.swift in Sources */,
+				B7270D331D1EBFB100F8FC88 /* TShape.swift in Sources */,
+				B7270D301D1EBFB100F8FC88 /* SquareShape.swift in Sources */,
+				B7270D2D1D1EBFB100F8FC88 /* LineShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B7F023991D1EB23A00D6C439 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B7F0237E1D1EB23900D6C439 /* Ocular-Tetris */;
-			targetProxy = B7F023981D1EB23A00D6C439 /* PBXContainerItemProxy */;
-		};
-		B7F023A41D1EB23A00D6C439 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B7F0237E1D1EB23900D6C439 /* Ocular-Tetris */;
-			targetProxy = B7F023A31D1EB23A00D6C439 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B7F0238A1D1EB23900D6C439 /* Main.storyboard */ = {
@@ -408,70 +299,24 @@
 		B7F023AC1D1EB23A00D6C439 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "EN.io.Ocular-Tetris";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ocular;
+				PRODUCT_NAME = "Ocular-Tetris";
 			};
 			name = Debug;
 		};
 		B7F023AD1D1EB23A00D6C439 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "EN.io.Ocular-Tetris";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		B7F023AF1D1EB23A00D6C439 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = "Ocular-TetrisTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "EN.io.Ocular-TetrisTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ocular-Tetris.app/Ocular-Tetris";
-			};
-			name = Debug;
-		};
-		B7F023B01D1EB23A00D6C439 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Ocular-TetrisTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "EN.io.Ocular-TetrisTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ocular-Tetris.app/Ocular-Tetris";
-			};
-			name = Release;
-		};
-		B7F023B21D1EB23A00D6C439 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = "Ocular-TetrisUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "EN.io.Ocular-TetrisUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Ocular-Tetris";
-			};
-			name = Debug;
-		};
-		B7F023B31D1EB23A00D6C439 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Ocular-TetrisUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "EN.io.Ocular-TetrisUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Ocular-Tetris";
+				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ocular;
+				PRODUCT_NAME = "Ocular-Tetris";
 			};
 			name = Release;
 		};
@@ -494,22 +339,7 @@
 				B7F023AD1D1EB23A00D6C439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B7F023AE1D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ocular-TetrisTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7F023AF1D1EB23A00D6C439 /* Debug */,
-				B7F023B01D1EB23A00D6C439 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		B7F023B11D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ocular-TetrisUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7F023B21D1EB23A00D6C439 /* Debug */,
-				B7F023B31D1EB23A00D6C439 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
