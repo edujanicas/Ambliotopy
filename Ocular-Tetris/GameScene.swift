@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-let BlockSize:CGFloat = 50.0
+let BlockSize:CGFloat = 40.0
 
 let TickLengthLevelOne = NSTimeInterval(600)
 
@@ -20,7 +20,7 @@ class GameScene: SKScene {
     
     let gameLayer = SKNode()
     let shapeLayer = SKNode()
-    let LayerPosition = CGPoint(x: 6, y: -6)
+    let LayerPosition = CGPoint(x: 100, y: -50)
     
     var textureCache = Dictionary<String, SKTexture>()
     
@@ -91,9 +91,9 @@ class GameScene: SKScene {
                 texture = SKTexture(imageNamed: block.spriteName + String(level))
                 textureCache[block.spriteName + String(level)] = texture
             }
-            let sprite = SKSpriteNode(texture: texture, size: CGSizeMake(BlockSize - 5, BlockSize - 5))
+            let sprite = SKSpriteNode(texture: texture, size: CGSizeMake(BlockSize - 10, BlockSize - 10))
             // #11
-            sprite.position = pointForColumn(block.column, row:block.row - 2)
+            sprite.position = pointForColumn(block.column, row: block.row - 2)
             shapeLayer.addChild(sprite)
             block.sprite = sprite
             
