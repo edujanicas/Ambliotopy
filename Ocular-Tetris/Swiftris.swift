@@ -1,3 +1,5 @@
+import Foundation
+
 let NumColumns = 10
 let NumRows = 20
 
@@ -8,9 +10,11 @@ let PreviewColumn = 12
 let PreviewRow = 1
 
 let PointsPerLine = 10
-let LevelThreshold = 50
+let LevelThreshold = 500
 
 var level = 1
+
+let defaults = NSUserDefaults.standardUserDefaults()
 
 protocol SwiftrisDelegate {
     func gameDidEnd(swiftris: Swiftris)
@@ -33,6 +37,12 @@ class Swiftris {
         fallingShape = nil
         nextShape = nil
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
+        
+        // Check for saved level on the system
+        let savedLevel = defaults.integerForKey("level")
+        if savedLevel > 0 {
+            level = savedLevel
+        }
     }
     
     func beginGame() {
@@ -97,7 +107,6 @@ class Swiftris {
     
     func endGame() {
         score = 0
-        level = 1
         delegate?.gameDidEnd(self)
     }
     
@@ -142,6 +151,8 @@ class Swiftris {
         score += pointsEarned
         if score >= level * LevelThreshold {
             level += 1
+            // Save current level on the system
+            defaults.setInteger(level, forKey: "level")
             delegate?.gameDidLevelUp(self)
         }
         
