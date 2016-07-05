@@ -9,14 +9,23 @@
 import SpriteKit
 
 let BlockSize:CGFloat = 40.0
-
 let TickLengthLevelOne = NSTimeInterval(600)
+
+// Variables still in test to check for daily usage of the app
+var gameTime = 0
+// -----------------------------------------------------------
 
 class GameScene: SKScene {
     
     var tick:(() -> ())?
     var tickLengthMillis = TickLengthLevelOne
     var lastTick:NSDate?
+    
+    // Variables still in test to check for daily usage of the app
+    var firstTick:NSDate = NSDate()
+    var secondTick:NSDate = NSDate()
+    var timer:NSTimeInterval = 0
+    // -----------------------------------------------------------
     
     let gameLayer = SKNode()
     let shapeLayer = SKNode()
@@ -49,6 +58,10 @@ class GameScene: SKScene {
         shapeLayer.addChild(gameBoard)
         gameLayer.addChild(shapeLayer)
         
+        // Variables still in test to check for daily usage of the app
+        gameTime = defaults.integerForKey("gameTime")
+        // -----------------------------------------------------------
+        
         runAction(SKAction.repeatActionForever(SKAction.playSoundFileNamed("Sounds/theme.mp3", waitForCompletion: true)))
 
     }
@@ -59,9 +72,21 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        
+        // Variables still in test to check for daily usage of the app
+        timer = secondTick.timeIntervalSinceNow * -1000.0
+        if ((timer - 1000) > 0) {
+            secondTick = NSDate()
+            gameTime += 1
+            print(gameTime)
+            defaults.setInteger(gameTime, forKey: "gameTime")
+        }
+        // -----------------------------------------------------------
+        
         guard let lastTick = lastTick else {
             return
         }
+        
         let timePassed = lastTick.timeIntervalSinceNow * -1000.0
         if timePassed > tickLengthMillis {
             self.lastTick = NSDate()

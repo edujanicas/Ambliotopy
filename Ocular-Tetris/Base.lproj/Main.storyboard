@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FFP-Pi-yKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A239j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FFP-Pi-yKT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -42,6 +43,14 @@
                                     <segue destination="BV1-FR-VrT" kind="presentation" modalTransitionStyle="flipHorizontal" id="eXE-ip-xic"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fes-JG-L9M">
+                                <rect key="frame" x="273" y="657" width="222" height="166"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Charts"/>
+                                <connections>
+                                    <segue destination="RZm-WW-bV6" kind="show" id="t7h-em-GHb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -60,7 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBk-9p-Ak2">
@@ -106,6 +115,7 @@
                             <outletCollection property="gestureRecognizers" destination="8u2-Ad-YJ7" appends="YES" id="K86-BV-zPB"/>
                         </connections>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -134,7 +144,42 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-9" y="188"/>
+            <point key="canvasLocation" x="215" y="146"/>
+        </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="kkf-cP-3qF">
+            <objects>
+                <viewController id="RZm-WW-bV6" customClass="BarChartViewController" customModule="Ocular_Tetris" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bMN-rQ-lZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="tY7-pJ-n2E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z3a-iN-UO4">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQO-m1-g6B" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="44" width="728" height="916"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tY7-pJ-n2E" firstAttribute="top" secondItem="aQO-m1-g6B" secondAttribute="bottom" id="JNE-dt-3zP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aQO-m1-g6B" secondAttribute="trailing" id="PKa-ib-yfH"/>
+                            <constraint firstItem="aQO-m1-g6B" firstAttribute="leading" secondItem="z3a-iN-UO4" secondAttribute="leadingMargin" id="u1X-fh-lkG"/>
+                            <constraint firstItem="aQO-m1-g6B" firstAttribute="top" secondItem="bMN-rQ-lZr" secondAttribute="bottom" constant="44" id="upR-Y9-mij"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="barChartView" destination="aQO-m1-g6B" id="X5J-Zd-vcy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2a-5X-ybi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="1417"/>
         </scene>
     </scenes>
 </document>
