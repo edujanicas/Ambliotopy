@@ -22,6 +22,7 @@
 		B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D271D1EBFB100F8FC88 /* Swiftris.swift */; };
 		B7270D331D1EBFB100F8FC88 /* TShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D281D1EBFB100F8FC88 /* TShape.swift */; };
 		B7270D341D1EBFB100F8FC88 /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7270D291D1EBFB100F8FC88 /* ZShape.swift */; };
+		B7A629C91D2EE6A400A01538 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A629C81D2EE6A400A01538 /* Clock.swift */; };
 		B7C1D06D1D2C71460057A931 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C1D0661D2C713A0057A931 /* Charts.framework */; };
 		B7C1D06E1D2C71460057A931 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C1D0661D2C713A0057A931 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023821D1EB23900D6C439 /* AppDelegate.swift */; };
@@ -100,6 +101,7 @@
 		B7270D281D1EBFB100F8FC88 /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		B7270D291D1EBFB100F8FC88 /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
 		B79042F31D1F29580005948E /* Ocular-Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ocular-Tetris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A629C81D2EE6A400A01538 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		B7C1D05E1D2C713A0057A931 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		B7F023821D1EB23900D6C439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F023861D1EB23900D6C439 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				B7270D221D1EBFB100F8FC88 /* LineShape.swift */,
 				B7270D231D1EBFB100F8FC88 /* LShape.swift */,
 				B7270D241D1EBFB100F8FC88 /* Shape.swift */,
+				B7A629C81D2EE6A400A01538 /* Clock.swift */,
 				B7270D251D1EBFB100F8FC88 /* SquareShape.swift */,
 				B7270D261D1EBFB100F8FC88 /* SShape.swift */,
 				B7270D271D1EBFB100F8FC88 /* Swiftris.swift */,
@@ -285,6 +288,7 @@
 			files = (
 				B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */,
 				B7F023871D1EB23900D6C439 /* GameScene.swift in Sources */,
+				B7A629C91D2EE6A400A01538 /* Clock.swift in Sources */,
 				B7270D2A1D1EBFB100F8FC88 /* Array2D.swift in Sources */,
 				B7270D2B1D1EBFB100F8FC88 /* Block.swift in Sources */,
 				B7F023891D1EB23900D6C439 /* GameViewController.swift in Sources */,

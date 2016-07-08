@@ -10,7 +10,7 @@ let PreviewColumn = 12
 let PreviewRow = 1
 
 let PointsPerLine = 10
-let LevelThreshold = 500
+let LevelThreshold = 10
 
 var level = 1
 
@@ -150,7 +150,9 @@ class Swiftris {
         let pointsEarned = removedLines.count * PointsPerLine * level
         score += pointsEarned
         if score >= level * LevelThreshold {
-            level += 1
+            if (level < 5) {
+                level += 1
+            }
             // Save current level on the system
             defaults.setInteger(level, forKey: "level")
             delegate?.gameDidLevelUp(self)

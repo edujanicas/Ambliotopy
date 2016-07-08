@@ -12,17 +12,13 @@ import Charts
 
 class BarChartViewController: UIViewController {
     
-    
     @IBOutlet weak var barChartView: BarChartView!
-    
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        setChart(months, values: unitsSold)
+        let (days, time) = clock.daysPlayed()
+        setChart(days, values: time)
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
@@ -37,7 +33,7 @@ class BarChartViewController: UIViewController {
         }
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
-        let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
+        let chartData = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
         barChartView.data = chartData
         
         barChartView.descriptionText = ""
