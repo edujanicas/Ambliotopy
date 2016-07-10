@@ -23,7 +23,7 @@ class BarChartViewController: UIViewController {
     
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "You need to provide data for the chart."
-        barChartView.noDataTextDescription = "You need to play at least once."
+        barChartView.noDataTextDescription = "To provide data, you need to play at least once."
         
         var dataEntries: [BarChartDataEntry] = []
         
@@ -32,16 +32,16 @@ class BarChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Seconds played")
         let chartData = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
         barChartView.data = chartData
         
         barChartView.descriptionText = ""
-        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+        chartDataSet.colors = [UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)]
         barChartView.xAxis.labelPosition = .Bottom
-        barChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
+        barChartView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
-        let ll = ChartLimitLine(limit: 10.0, label: "Target")
+        let ll = ChartLimitLine(limit: 60.0, label: "Target")
         barChartView.rightAxis.addLimitLine(ll)
     }
     
