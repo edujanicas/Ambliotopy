@@ -19,4 +19,15 @@ struct ColorModel {
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
         return colors[randomNumber]
     }
+    
+    func changeColor( oldcolor: UIColor) -> UIColor{
+        var newcolor = oldcolor
+        if(newcolor == colors[0]){
+            newcolor=colors[1]
+        }
+        else{
+            newcolor=colors[0]
+        }
+        return newcolor
+    }
 }
