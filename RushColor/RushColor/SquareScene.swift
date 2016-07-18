@@ -9,27 +9,66 @@
 import UIKit
 import SpriteKit
 
-class SquareScene: SKScene {
+struct PhysicsCategory {
+    static let circle : UInt32 = 0x1 << 1
+    static let square : UInt32 = 0x1 << 2
+    static let scoreN : UInt32 = 0x1 << 3
+}
+
+class SquareScene: SKScene, SKPhysicsContactDelegate {
     
-    var numberofCircles = 40
     let redColor = ColorModel().colors[0]
     let blueColor = ColorModel().colors[1]
+    let increment = 1
+    var score = Int()
     
     override func didMoveToView(view: SKView) {
-        self.physicsWorld.gravity = CGVectorMake(0, -1.2)
-        self.initSquareScene()
+        self.physicsWorld.contactDelegate = self
+        self.physicsWorld.gravity = CGVectorMake(0, -4)
+        self.createSquareNode()
+        self.dropingCircles()
     }
     
-    func initSquareScene(){
-        
-        self.createSquareNode()
+//==================================================================================
+//    func circleDroping(){
+//        let spawn = SKAction.runBlock({
+//            () in
+//            
+//            self.initSquareScene()
+//        })
+//        
+//        let spawnDelay = SKAction.sequence([spawn])
+//        let spawnDelayForever = SKAction.repeatActionForever(spawnDelay)
+//        self.runAction(spawnDelayForever)
+//    }
+//==================================================================================
+    
+    func dropingCircles(){
         
         let dropCircles = SKAction.sequence([SKAction.runBlock({
             self.createCircleNode()}),
             SKAction.waitForDuration(2.0)
             ])
         
-        self.runAction(SKAction.repeatAction(dropCircles, count: numberofCircles))
+        let spawnDelay = SKAction.sequence([dropCircles])
+        let spawnDelayForever = SKAction.repeatActionForever(spawnDelay)
+        self.runAction(spawnDelayForever)
+        //FALTA REMOVER OS NODES
+//        let remove = SKAction.removeFromParent()
+//        self.runAction(remove)
+        
+        
+//        self.runAction(SKAction.repeatAction(dropCircles, count: numberofCircles))
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        let firstBody = contact.bodyA
+        let secondBody = contact.bodyB
+
+        if firstBody.categoryBitMask == PhysicsCategory.square && secondBody.categoryBitMask == PhysicsCategory.circle || firstBody.categoryBitMask == PhysicsCategory.circle && secondBody.categoryBitMask == PhysicsCategory.square{
+            score += increment
+            print(score)
+        }
     }
     
 
@@ -69,6 +108,16 @@ class SquareScene: SKScene {
         square.strokeColor = redColor
         square.position = CGPointMake(373.105, 193.987)
         square.userInteractionEnabled = false
+        
+        square.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -100))
+        square.physicsBody?.categoryBitMask = PhysicsCategory.square
+        square.physicsBody?.collisionBitMask = PhysicsCategory.circle
+        square.physicsBody?.contactTestBitMask = PhysicsCategory.circle
+        square.physicsBody?.affectedByGravity = false
+        square.physicsBody?.dynamic = false
+        
+        square.zPosition = 3
+        
         self.addChild(square)
         
         return square
@@ -85,9 +134,35 @@ class SquareScene: SKScene {
         circle.userInteractionEnabled = true
         circle.physicsBody = SKPhysicsBody(circleOfRadius: 40)
         circle.physicsBody?.dynamic = true //.physicsBody?.dynamic = true
+        
+        circle.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: 200))
+        circle.physicsBody?.categoryBitMask = PhysicsCategory.circle
+        circle.physicsBody?.collisionBitMask = PhysicsCategory.square
+        circle.physicsBody?.contactTestBitMask = PhysicsCategory.square
+        circle.physicsBody?.affectedByGravity = true
+        circle.physicsBody?.dynamic = true
+        
+        
+        circle.zPosition = 2
+        
         self.addChild(circle)
+        
         return circle
         
+    }
+    
+    func createscoreNode() -> SKSpriteNode{
+        let scoreN = SKSpriteNode()
+        scoreN.size = CGSize(width: 1, height: 200)
+        scoreN.position = CGPoint(x: 400, y: 193.987)
+        scoreN.physicsBody = SKPhysicsBody(rectangleOfSize: scoreN.size)
+        scoreN.physicsBody?.affectedByGravity = false
+        scoreN.physicsBody?.dynamic = false
+        scoreN.physicsBody?.categoryBitMask = PhysicsCategory.scoreN
+        scoreN.physicsBody?.collisionBitMask = 0
+        scoreN.physicsBody?.contactTestBitMask = 0
+        
+        return scoreN
     }
 
 }
