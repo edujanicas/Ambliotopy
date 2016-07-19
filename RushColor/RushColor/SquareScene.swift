@@ -45,9 +45,12 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     
     func dropingCircles(){
         
+        var node:SKShapeNode = SKShapeNode()
+        
         let dropCircles = SKAction.sequence([SKAction.runBlock({
-            self.createCircleNode()}),
-            SKAction.waitForDuration(2.0)
+            node = self.createCircleNode()}),
+            SKAction.waitForDuration(2.0),
+            SKAction.runBlock({ node.removeFromParent() }),
             ])
         
         let spawnDelay = SKAction.sequence([dropCircles])
@@ -56,7 +59,6 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
         //FALTA REMOVER OS NODES
 //        let remove = SKAction.removeFromParent()
 //        self.runAction(remove)
-        
         
 //        self.runAction(SKAction.repeatAction(dropCircles, count: numberofCircles))
     }
