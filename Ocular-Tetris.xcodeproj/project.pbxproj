@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B707BE4C1D2C70BF00B9226A /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */; };
+		B718E2211D3BF4A6000D4315 /* Calibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718E2201D3BF4A6000D4315 /* Calibration.swift */; };
+		B718E2261D3BF71D000D4315 /* CalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */; };
 		B7270D161D1EB34200F8FC88 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = B7270D151D1EB34200F8FC88 /* Sounds */; };
 		B7270D181D1EB35500F8FC88 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B7270D171D1EB35500F8FC88 /* Sprites.atlas */; };
 		B7270D1A1D1EB39900F8FC88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7270D191D1EB39900F8FC88 /* Images.xcassets */; };
@@ -86,6 +88,8 @@
 
 /* Begin PBXFileReference section */
 		B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		B718E2201D3BF4A6000D4315 /* Calibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calibration.swift; sourceTree = "<group>"; };
+		B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibrationViewController.swift; sourceTree = "<group>"; };
 		B7270D151D1EB34200F8FC88 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		B7270D171D1EB35500F8FC88 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Sprites.atlas; path = ../Sprites.atlas; sourceTree = "<group>"; };
 		B7270D191D1EB39900F8FC88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -159,8 +163,10 @@
 				B7270D261D1EBFB100F8FC88 /* SShape.swift */,
 				B7270D271D1EBFB100F8FC88 /* Swiftris.swift */,
 				B7270D281D1EBFB100F8FC88 /* TShape.swift */,
+				B718E2201D3BF4A6000D4315 /* Calibration.swift */,
 				B7270D291D1EBFB100F8FC88 /* ZShape.swift */,
 				B7F023881D1EB23900D6C439 /* GameViewController.swift */,
+				B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */,
 				B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */,
 				B7F0238A1D1EB23900D6C439 /* Main.storyboard */,
 				B7F0238F1D1EB23900D6C439 /* LaunchScreen.storyboard */,
@@ -287,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */,
+				B718E2261D3BF71D000D4315 /* CalibrationViewController.swift in Sources */,
 				B7F023871D1EB23900D6C439 /* GameScene.swift in Sources */,
 				B7A629C91D2EE6A400A01538 /* Clock.swift in Sources */,
 				B7270D2A1D1EBFB100F8FC88 /* Array2D.swift in Sources */,
@@ -296,6 +303,7 @@
 				B7270D2E1D1EBFB100F8FC88 /* LShape.swift in Sources */,
 				B7270D2C1D1EBFB100F8FC88 /* JShape.swift in Sources */,
 				B7270D311D1EBFB100F8FC88 /* SShape.swift in Sources */,
+				B718E2211D3BF4A6000D4315 /* Calibration.swift in Sources */,
 				B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */,
 				B7270D341D1EBFB100F8FC88 /* ZShape.swift in Sources */,
 				B7270D331D1EBFB100F8FC88 /* TShape.swift in Sources */,
