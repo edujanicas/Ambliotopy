@@ -20,12 +20,14 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     let redColor = ColorModel().colors[0]
     let blueColor = ColorModel().colors[1]
     let increment = 1
+    var square = SKShapeNode.init()
+    
     var score = Int()
     
     override func didMoveToView(view: SKView) {
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.gravity = CGVectorMake(0, -4)
-        self.createSquareNode()
+        square = self.createSquareNode()
         self.dropingCircles()
     }
     
@@ -74,34 +76,18 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     }
     
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+    func changeColor(){
         
-            for touch: AnyObject in touches {
-                let positionOfTouch = touch.locationInNode(self)
-                if let node = nodeAtPoint(positionOfTouch) as? SKShapeNode {
-//                    node.zRotation += 60
-                    if(node.fillColor == redColor){
-                        node.fillColor = blueColor
-                        node.strokeColor=blueColor
-                    }
-                    else{
-                        node.fillColor = redColor
-                        node.strokeColor = redColor
-                    }
-                    
-                    
-                    
-                }
+        if(square.fillColor == redColor){
+            square.fillColor = blueColor
+            square.strokeColor=blueColor
         }
-        
-//        let squareNode = self.childNodeWithName("squareNode")
-//        if (squareNode != nil){
-//            
-//            let changeColor = SKAction.colorizeWithColor(blueColor, colorBlendFactor: 0.0, duration: 0)
-//            squareNode?.runAction(changeColor)
-//        
-//        }
+        else{
+            square.fillColor = redColor
+            square.strokeColor = redColor
+        }
     }
+
     
     func createSquareNode() -> SKShapeNode {
         let square = SKShapeNode(rectOfSize: CGSize(width: 200, height: 200))

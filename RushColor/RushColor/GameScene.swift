@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    var squareScene: SquareScene!
+    
     //Setup your scene here
     override func didMoveToView(view: SKView) {
 
@@ -25,9 +27,9 @@ class GameScene: SKScene {
             
             introLabel?.runAction(fadeOut, completion: {
                 let doors = SKTransition.doorwayWithDuration(1.5)
-                let squareScene = SquareScene(fileNamed: "SquareScene")
+                self.squareScene = SquareScene(fileNamed: "SquareScene")
                 
-                self.view?.presentScene(squareScene!, transition: doors)
+                self.view?.presentScene(self.squareScene, transition: doors)
             })
         }
 
