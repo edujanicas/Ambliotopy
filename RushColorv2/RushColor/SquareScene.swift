@@ -24,11 +24,13 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     let orangeColor = ColorModel().backgroundColor
     let increment = 1
     var score = Int()
+    var hightscore = Int()
     var scoreLbl = SKLabelNode() //NOVO
+    var hightscoreLbl = SKLabelNode() //NOVO
     var circle = SKShapeNode(circleOfRadius: 40) //NOVO
     var square = SKShapeNode(rectOfSize: CGSize(width: 200, height: 200)) //NOVO
     var died = Bool() //NOVO
-    var restartBTN = SKSpriteNode(color: SKColor.orangeColor(), size: CGSize(width: 200, height: 100)) //NOVO
+    var restartBTN = SKSpriteNode(imageNamed: "play") //NOVO
     
     func restartScene(){
         self.removeAllChildren()
@@ -44,6 +46,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
         self.createSquareNode()
         self.dropingCircles()
         self.createscoreLbl() //NOVO
+        self.createshightcoreLbl()
     }
     
     override func didMoveToView(view: SKView) {
@@ -96,13 +99,16 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
             if(square.fillColor == circle.fillColor){
                 score += increment
                 scoreLbl.text = "\(score)"
+                if(hightscore<score){
+                    hightscore = score
+                    hightscoreLbl.text = "\(hightscore)"
+                }
             }
             else{
                 died = true
+
                 createrestartBTNNode()
             }
-            
-            
         }
     }
     
@@ -148,7 +154,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
         square.position = CGPointMake(self.frame.width / 2, 193.987) //NOVO
         square.userInteractionEnabled = false
         
-        square.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -100))
+        square.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -150))
         square.physicsBody?.categoryBitMask = PhysicsCategory.square
         square.physicsBody?.collisionBitMask = PhysicsCategory.circle
         square.physicsBody?.contactTestBitMask = PhysicsCategory.circle
@@ -204,9 +210,10 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
 //    }
     
     func createscoreLbl()-> SKLabelNode{ //NOVO
-        scoreLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + self.frame.height / 2.5)
+        scoreLbl.position = CGPoint(x: self.frame.width / 2, y: 100)
         scoreLbl.text = "\(score)"
         scoreLbl.fontName = "04b_19"
+        scoreLbl.fontSize = 100
         
         scoreLbl.zPosition = 3
         
@@ -215,10 +222,24 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
         return scoreLbl
     }
     
+    func createshightcoreLbl()-> SKLabelNode{ //NOVO
+        hightscoreLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + 200)
+        
+        hightscoreLbl.text = "\(hightscore)"
+        hightscoreLbl.fontName = "04b_19"
+        hightscoreLbl.fontSize = 100
+        
+        hightscoreLbl.zPosition = 3
+        
+        self.addChild(hightscoreLbl)
+        
+        return hightscoreLbl
+    }
+    
     func createrestartBTNNode(){
         restartBTN.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         
-        restartBTN.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -18))
+        restartBTN.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -190))
         restartBTN.physicsBody?.categoryBitMask = PhysicsCategory.pop
         restartBTN.physicsBody?.collisionBitMask = PhysicsCategory.circle
         restartBTN.physicsBody?.contactTestBitMask = PhysicsCategory.circle
