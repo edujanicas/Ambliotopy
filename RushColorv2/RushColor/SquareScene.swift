@@ -223,7 +223,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createshightcoreLbl()-> SKLabelNode{ //NOVO
-        hightscoreLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + 200)
+        hightscoreLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + 320)
         
         hightscoreLbl.text = "\(hightscore)"
         hightscoreLbl.fontName = "04b_19"
