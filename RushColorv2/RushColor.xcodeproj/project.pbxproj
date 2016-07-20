@@ -17,6 +17,7 @@
 		300546CE1D345D3D004B38D1 /* SquareScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300546CD1D345D3D004B38D1 /* SquareScene.swift */; };
 		300546D01D345F2E004B38D1 /* SquareScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 300546CF1D345F2E004B38D1 /* SquareScene.sks */; };
 		3056917C1D347EEE001B207A /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3056917B1D347EEE001B207A /* ColorModel.swift */; };
+		30AC55961D3FD6BB00F02893 /* 04B_19__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 30AC55951D3FD6BB00F02893 /* 04B_19__.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		300546CD1D345D3D004B38D1 /* SquareScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareScene.swift; sourceTree = "<group>"; };
 		300546CF1D345F2E004B38D1 /* SquareScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SquareScene.sks; sourceTree = "<group>"; };
 		3056917B1D347EEE001B207A /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		30AC55951D3FD6BB00F02893 /* 04B_19__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_19__.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		300546B61D34507F004B38D1 /* RushColor */ = {
 			isa = PBXGroup;
 			children = (
+				30AC55951D3FD6BB00F02893 /* 04B_19__.TTF */,
 				300546B71D34507F004B38D1 /* AppDelegate.swift */,
 				300546B91D34507F004B38D1 /* GameScene.sks */,
 				300546BB1D34507F004B38D1 /* GameScene.swift */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300546BA1D34507F004B38D1 /* GameScene.sks in Resources */,
+				30AC55961D3FD6BB00F02893 /* 04B_19__.TTF in Resources */,
 				300546C61D34507F004B38D1 /* LaunchScreen.storyboard in Resources */,
 				300546C31D34507F004B38D1 /* Assets.xcassets in Resources */,
 				300546C11D34507F004B38D1 /* Main.storyboard in Resources */,

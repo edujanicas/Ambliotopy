@@ -175,8 +175,8 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
         
         circle.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: 200))
         circle.physicsBody?.categoryBitMask = PhysicsCategory.circle
-        circle.physicsBody?.collisionBitMask = PhysicsCategory.square
-        circle.physicsBody?.contactTestBitMask = PhysicsCategory.square
+        circle.physicsBody?.collisionBitMask = PhysicsCategory.square | PhysicsCategory.pop
+        circle.physicsBody?.contactTestBitMask = PhysicsCategory.square | PhysicsCategory.pop
         circle.physicsBody?.affectedByGravity = true
         circle.physicsBody?.dynamic = true
         
@@ -206,6 +206,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     func createscoreLbl()-> SKLabelNode{ //NOVO
         scoreLbl.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + self.frame.height / 2.5)
         scoreLbl.text = "\(score)"
+        scoreLbl.fontName = "04b_19"
         
         scoreLbl.zPosition = 3
         
@@ -217,12 +218,16 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     func createrestartBTNNode(){
         restartBTN.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         
-        square.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -100))
-        square.physicsBody?.categoryBitMask = PhysicsCategory.pop
-        square.physicsBody?.collisionBitMask = PhysicsCategory.circle
-        square.physicsBody?.contactTestBitMask = PhysicsCategory.circle
-        square.physicsBody?.affectedByGravity = false
-        square.physicsBody?.dynamic = false
+        restartBTN.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 200, height: -18))
+        restartBTN.physicsBody?.categoryBitMask = PhysicsCategory.pop
+        restartBTN.physicsBody?.collisionBitMask = PhysicsCategory.circle
+        restartBTN.physicsBody?.contactTestBitMask = PhysicsCategory.circle
+        restartBTN.physicsBody?.affectedByGravity = false
+        restartBTN.physicsBody?.dynamic = false
+        
+        square.userInteractionEnabled = true
+        square.fillColor = orangeColor
+        square.strokeColor = orangeColor
         
         restartBTN.zPosition = 5
         self.addChild(restartBTN)
