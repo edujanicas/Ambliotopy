@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ResearchKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -9,6 +9,8 @@
 import UIKit
 import SpriteKit
 
+let TickLengthCalibration = NSTimeInterval(3000)
+
 class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
@@ -33,8 +35,6 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
         
         // Present the scene
         skView.presentScene(scene)
-        
-        
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -46,14 +46,14 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
     }
     
     func didTick() {
-        // calibration.changeContrast()
+        calibration.changeContrast()
     }
     
     func calibrationDidBegin(calibration: Calibration) {
         // levelLabel.text = "\(level)"
         // scoreLabel.text = "\(swiftris.score)"
-        scene.tickLengthMillis = TickLengthLevelOne
-        
+        scene.tickLengthMillis = TickLengthCalibration
+        self.scene.startTicking()
         scene.addPreviewShapeToScene(calibration.shape!) {}
 
     }
@@ -63,8 +63,15 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
         scene.stopTicking()
     }
     
-    func calibrationDidLevelUp(calibration: Calibration) {
-        //levelLabel.text = "\(level)"
+    func calibrationWillLevelUp(calibration: Calibration) {
+        scene.removePreviewShapesFromScene()
     }
     
+    func calibrationDidLevelUp(calibration: Calibration) {
+        scene.addPreviewShapeToScene(calibration.shape!) {}
+    }
+    
+    @IBAction func didEnd(sender: AnyObject) {
+        calibrationDidEnd(calibration)
+    }
 }

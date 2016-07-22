@@ -114,6 +114,20 @@ class GameScene: SKScene {
         runAction(SKAction.waitForDuration(0.4), completion: completion)
     }
     
+    func removePreviewShapesFromScene() {
+        
+        // dropFirst returns an array of typle SplicedArray, so we have to create a new SKNode array from each element of childrenArraySlice
+        let childrenArraySlice = shapeLayer.children.dropFirst()
+        var childrenArray : [SKNode]
+        childrenArray = []
+        
+        for element in childrenArraySlice {
+            childrenArray.append(element)
+        }
+        shapeLayer.removeChildrenInArray(childrenArray)
+    
+    }
+    
     func movePreviewShape(shape:Shape, completion:() -> ()) {
         for block in shape.blocks {
             let sprite = block.sprite!
