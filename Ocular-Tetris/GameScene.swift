@@ -2,16 +2,23 @@
 //  GameScene.swift
 //  Ocular-Tetris
 //
-//  Created by Eduardo Janicas on 25/06/16.
+//  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
 //  Copyright (c) 2016 EN. All rights reserved.
 //
 
 import SpriteKit
 
-let BlockSize:CGFloat = 40.0
-let TickLengthLevelOne = NSTimeInterval(600)
+var BlockSize:CGFloat = 40.0
 
+let TickLengthLevelOne = NSTimeInterval(600)
 let clock = Clock()
+
+let RedRed = 166
+let RedGreen = 0
+let RedBlue = 22
+let BlueRed = 2
+let BlueGreen = 36
+let BlueBlue = 100
 
 class GameScene: SKScene {
     
@@ -21,7 +28,7 @@ class GameScene: SKScene {
     
     let gameLayer = SKNode()
     let shapeLayer = SKNode()
-    let LayerPosition = CGPoint(x: 100, y: -50)
+    let LayerPosition = CGPoint(x: 10, y: -20)
     
     var textureCache = Dictionary<String, SKTexture>()
     
@@ -32,17 +39,19 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         
+        // The size of each block is determined by the size of the view, diveded by the number of the columns of the game. The 6 extra columns are given only for aestetich reasons
+        BlockSize = size.width / CGFloat(NumColumns + 6)
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
-        let background = SKSpriteNode(imageNamed: "background")
+        let background = SKSpriteNode(color: UIColor.blackColor(), size: size)
         background.position = CGPoint(x: 0, y: 0)
         background.anchorPoint = CGPoint(x: 0, y: 1.0)
+            
         addChild(background)
         
         addChild(gameLayer)
         
-        let gameBoardTexture = SKTexture(imageNamed: "gameboard")
-        let gameBoard = SKSpriteNode(texture: gameBoardTexture, size: CGSizeMake(BlockSize * CGFloat(NumColumns), BlockSize * CGFloat(NumRows)))
+        let gameBoard = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(BlockSize * CGFloat(NumColumns), BlockSize * CGFloat(NumRows)))
         gameBoard.anchorPoint = CGPoint(x: 0, y: 1.0)
         gameBoard.position = LayerPosition
         
@@ -90,21 +99,17 @@ class GameScene: SKScene {
     
     func addPreviewShapeToScene(shape:Shape, completion:() -> ()) {
         for block in shape.blocks {
-            // #10
-            var texture = textureCache[block.spriteName + String(level)]
-            if texture == nil {
-                texture = SKTexture(imageNamed: block.spriteName + String(level))
-                textureCache[block.spriteName + String(level)] = texture
-            }
-            let sprite = SKSpriteNode(texture: texture, size: CGSizeMake(BlockSize - 10, BlockSize - 10))
-            // #11
+            
+            // Determines color of the block
+            let color = getUIColor(block.spriteName)
+            
+            let sprite = SKSpriteNode(color: color, size: CGSizeMake(BlockSize - 10, BlockSize - 10))
             sprite.position = pointForColumn(block.column, row: block.row - 2)
             shapeLayer.addChild(sprite)
             block.sprite = sprite
             
             // Animation
             sprite.alpha = 0
-            // #12
             let moveAction = SKAction.moveTo(pointForColumn(block.column, row: block.row), duration: NSTimeInterval(0.2))
             moveAction.timingMode = .EaseOut
             let fadeInAction = SKAction.fadeAlphaTo(0.7, duration: 0.4)
@@ -206,5 +211,25 @@ class GameScene: SKScene {
         }
         // #7
         runAction(SKAction.waitForDuration(longestDuration), completion:completion)
+    }
+    
+    func getUIColor(color: String) -> UIColor {
+        
+        switch color {
+        case "blue":
+            let r = CGFloat(BlueRed + RedRed) / 2.0
+            let g = CGFloat(BlueGreen + RedGreen) / 2.0
+            let b = CGFloat(BlueBlue + RedBlue) / 2.0
+            return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
+        case "red":
+            let r = CGFloat(BlueRed + RedRed) / 2.0
+            let g = CGFloat(BlueGreen + RedGreen) / 2.0
+            let b = CGFloat(BlueBlue + RedBlue) / 2.0
+            return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
+        default:
+            return UIColor.blackColor()
+        
+        }
+        
     }
 }

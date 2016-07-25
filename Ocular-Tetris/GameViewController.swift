@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  Ocular-Tetris
 //
-//  Created by Eduardo Janicas on 25/06/16.
+//  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
 //  Copyright (c) 2016 EN. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import SpriteKit
 class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
-    var swiftris:Swiftris!
+    var swiftris: Swiftris!
     
     var panPointReference:CGPoint?
     
@@ -20,6 +20,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     @IBOutlet weak var levelLabel: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // Configure the view.
@@ -38,7 +39,6 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         
         // Present the scene
         skView.presentScene(scene)
-        
         
     }
 
