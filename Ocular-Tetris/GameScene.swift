@@ -13,12 +13,12 @@ var BlockSize:CGFloat = 40.0
 let TickLengthLevelOne = NSTimeInterval(600)
 let clock = Clock()
 
-let RedRed = 166
-let RedGreen = 0
-let RedBlue = 22
-let BlueRed = 2
-let BlueGreen = 36
-let BlueBlue = 100
+let RedRed = 166.0
+let RedGreen = 0.0
+let RedBlue = 22.0
+let BlueRed = 2.0
+let BlueGreen = 36.0
+let BlueBlue = 100.0
 
 class GameScene: SKScene {
     
@@ -217,15 +217,15 @@ class GameScene: SKScene {
         
         switch color {
         case "blue":
-            let r = CGFloat(BlueRed + RedRed) / 2.0
-            let g = CGFloat(BlueGreen + RedGreen) / 2.0
-            let b = CGFloat(BlueBlue + RedBlue) / 2.0
-            return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
+            let r = BlueRed - (BlueRed - RedRed) / 2.0 * (Double(level) * 0.1)
+            let g = BlueGreen - (BlueGreen - RedGreen) / 2.0 * (Double(level) * 0.1)
+            let b = BlueBlue - (BlueBlue - RedBlue) / 2.0 * (Double(level) * 0.1)
+            return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         case "red":
-            let r = CGFloat(BlueRed + RedRed) / 2.0
-            let g = CGFloat(BlueGreen + RedGreen) / 2.0
-            let b = CGFloat(BlueBlue + RedBlue) / 2.0
-            return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
+            let r = RedRed - (RedRed - BlueRed)/2.0 * (Double(level) * 0.1)
+            let g = RedGreen - (RedGreen - BlueGreen)/2.0 * (Double(level) * 0.1)
+            let b = RedBlue - (RedBlue - BlueBlue) / 2.0 * (Double(level) * 0.1)
+            return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         default:
             return UIColor.blackColor()
         

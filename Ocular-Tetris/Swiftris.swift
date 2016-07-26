@@ -10,7 +10,7 @@ let PreviewColumn = 12
 let PreviewRow = 1
 
 let PointsPerLine = 10
-let LevelThreshold = 50
+let LevelThreshold = 20
 
 var level = 1
 
