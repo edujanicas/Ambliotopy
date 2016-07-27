@@ -12,7 +12,8 @@ let PreviewRow = 1
 let PointsPerLine = 10
 let LevelThreshold = 20
 
-var level = 1
+var blueLevel = 1
+var redLevel = 1
 
 let defaults = NSUserDefaults.standardUserDefaults()
 
@@ -39,9 +40,11 @@ class Swiftris {
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
         
         // Check for saved level on the system
-        let savedLevel = defaults.integerForKey("level")
-        if savedLevel > 0 {
-            level = savedLevel
+        let blueSavedLevel = defaults.integerForKey("blueLevel")
+        let redSavedLevel = defaults.integerForKey("redLevel")
+        if blueSavedLevel > 0 {
+            blueLevel = blueSavedLevel
+            redLevel = redSavedLevel
         }
     }
     
@@ -147,14 +150,24 @@ class Swiftris {
         if removedLines.count == 0 {
             return ([], [])
         }
-        let pointsEarned = removedLines.count * PointsPerLine * level
+        let pointsEarned = removedLines.count * PointsPerLine * ((blueLevel + redLevel) / 2)
         score += pointsEarned
-        if score >= level * LevelThreshold {
-            if (level < 5) {
-                level += 1
+        if score >= ((blueLevel + redLevel) / 2) * LevelThreshold {
+            if (blueLevel < 5 && blueLevel < redLevel) {
+                blueLevel += 1
+                defaults.setInteger(blueLevel, forKey: "blueLevel")
+            }
+            else if (redLevel < 5 && redLevel < blueLevel) {
+                redLevel += 1
+                defaults.setInteger(redLevel, forKey: "redLevel")
+            }
+            else if (blueLevel < 5 && blueLevel == redLevel) {
+                blueLevel += 1
+                redLevel += 1
+                defaults.setInteger(blueLevel, forKey: "blueLevel")
+                defaults.setInteger(redLevel, forKey: "redLevel")
             }
             // Save current level on the system
-            defaults.setInteger(level, forKey: "level")
             delegate?.gameDidLevelUp(self)
         }
         

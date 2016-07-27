@@ -20,7 +20,7 @@ class Calibration {
     
     func beginCalibration() {
 
-        shape = SquareShape(column:4, row:4, color:BlockColor.random(), orientation:Orientation.random())
+        shape = SquareShape(column:4, row:4, color:BlockColor.Blue, orientation:Orientation.random())
         delegate?.calibrationDidBegin(self)
     }
     
@@ -28,10 +28,17 @@ class Calibration {
         delegate?.calibrationDidEnd(self)
     }
     
-    func changeContrast() {
-        level += 1
+    func changeBlueContrast() {
+        blueLevel += 1
         delegate?.calibrationWillLevelUp(self)
-        shape = Shape.random(4, startingRow: 4)
+        shape = SquareShape(column:4, row:4, color:BlockColor.Blue, orientation:Orientation.random())
+        delegate?.calibrationDidLevelUp(self)
+    }
+    
+    func changeRedContrast() {
+        redLevel += 1
+        delegate?.calibrationWillLevelUp(self)
+        shape = SquareShape(column:4, row:4, color:BlockColor.Red, orientation:Orientation.random())
         delegate?.calibrationDidLevelUp(self)
     }
 

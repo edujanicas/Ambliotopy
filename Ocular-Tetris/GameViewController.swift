@@ -17,7 +17,8 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     var panPointReference:CGPoint?
     
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var redLevelLabel: UILabel!
+    @IBOutlet weak var blueLevelLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -111,7 +112,8 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidBegin(swiftris: Swiftris) {
-        levelLabel.text = "\(level)"
+        blueLevelLabel.text = "\(blueLevel)"
+        redLevelLabel.text = "\(redLevel)"
         scoreLabel.text = "\(swiftris.score)"
         scene.tickLengthMillis = TickLengthLevelOne
         // The following is false when restarting a new game
@@ -134,7 +136,8 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidLevelUp(swiftris: Swiftris) {
-        levelLabel.text = "\(level)"
+        blueLevelLabel.text = "\(blueLevel)"
+        redLevelLabel.text = "\(redLevel)"
         if scene.tickLengthMillis >= 100 {
             scene.tickLengthMillis -= 100
         } else if scene.tickLengthMillis > 50 {

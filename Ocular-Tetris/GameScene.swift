@@ -51,7 +51,11 @@ class GameScene: SKScene {
         
         addChild(gameLayer)
         
-        let gameBoard = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(BlockSize * CGFloat(NumColumns), BlockSize * CGFloat(NumRows)))
+        let r = (RedRed + BlueRed) / 2
+        let g = (RedGreen + BlueGreen) / 2
+        let b = (RedBlue + BlueBlue) / 2
+        
+        let gameBoard = SKSpriteNode(color: UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0), size: CGSizeMake(BlockSize * CGFloat(NumColumns), BlockSize * CGFloat(NumRows)))
         gameBoard.anchorPoint = CGPoint(x: 0, y: 1.0)
         gameBoard.position = LayerPosition
         
@@ -217,14 +221,14 @@ class GameScene: SKScene {
         
         switch color {
         case "blue":
-            let r = BlueRed - (BlueRed - RedRed) / 2.0 * (Double(level) * 0.1)
-            let g = BlueGreen - (BlueGreen - RedGreen) / 2.0 * (Double(level) * 0.1)
-            let b = BlueBlue - (BlueBlue - RedBlue) / 2.0 * (Double(level) * 0.1)
+            let r = BlueRed + ((BlueRed + RedRed) * (Double(blueLevel) * 0.1))
+            let g = BlueGreen - ((BlueGreen + RedGreen)  * (Double(blueLevel) * 0.1))
+            let b = BlueBlue - ((BlueBlue + RedBlue) * (Double(blueLevel) * 0.1))
             return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         case "red":
-            let r = RedRed - (RedRed - BlueRed)/2.0 * (Double(level) * 0.1)
-            let g = RedGreen - (RedGreen - BlueGreen)/2.0 * (Double(level) * 0.1)
-            let b = RedBlue - (RedBlue - BlueBlue) / 2.0 * (Double(level) * 0.1)
+            let r = RedRed - ((RedRed + BlueRed) * (Double(redLevel) * 0.1))
+            let g = RedGreen + ((RedGreen + BlueGreen) * (Double(redLevel) * 0.1))
+            let b = RedBlue + ((RedBlue + BlueBlue) * (Double(redLevel) * 0.1))
             return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         default:
             return UIColor.blackColor()
