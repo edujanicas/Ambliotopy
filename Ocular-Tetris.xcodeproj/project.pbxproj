@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306CEEEA1D49949B0094F1E1 /* 04B_19__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 306CEEE21D49949B0094F1E1 /* 04B_19__.TTF */; };
+		306CEEEB1D49949B0094F1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306CEEE31D49949B0094F1E1 /* Assets.xcassets */; };
+		306CEEEC1D49949B0094F1E1 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CEEE41D49949B0094F1E1 /* ColorModel.swift */; };
+		306CEEED1D49949B0094F1E1 /* RCScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 306CEEE51D49949B0094F1E1 /* RCScene.sks */; };
+		306CEEEE1D49949B0094F1E1 /* RCScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CEEE61D49949B0094F1E1 /* RCScene.swift */; };
+		306CEEEF1D49949B0094F1E1 /* RCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CEEE71D49949B0094F1E1 /* RCViewController.swift */; };
+		306CEEF01D49949B0094F1E1 /* SquareScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 306CEEE81D49949B0094F1E1 /* SquareScene.sks */; };
+		306CEEF11D49949B0094F1E1 /* SquareScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CEEE91D49949B0094F1E1 /* SquareScene.swift */; };
 		B707BE4C1D2C70BF00B9226A /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */; };
 		B718E2211D3BF4A6000D4315 /* Calibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718E2201D3BF4A6000D4315 /* Calibration.swift */; };
 		B718E2261D3BF71D000D4315 /* CalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */; };
@@ -87,6 +95,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		306CEEE21D49949B0094F1E1 /* 04B_19__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_19__.TTF; sourceTree = "<group>"; };
+		306CEEE31D49949B0094F1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		306CEEE41D49949B0094F1E1 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		306CEEE51D49949B0094F1E1 /* RCScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RCScene.sks; sourceTree = "<group>"; };
+		306CEEE61D49949B0094F1E1 /* RCScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCScene.swift; sourceTree = "<group>"; };
+		306CEEE71D49949B0094F1E1 /* RCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCViewController.swift; sourceTree = "<group>"; };
+		306CEEE81D49949B0094F1E1 /* SquareScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SquareScene.sks; sourceTree = "<group>"; };
+		306CEEE91D49949B0094F1E1 /* SquareScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareScene.swift; sourceTree = "<group>"; };
 		B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		B718E2201D3BF4A6000D4315 /* Calibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calibration.swift; sourceTree = "<group>"; };
 		B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibrationViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +187,14 @@
 				B7F0238A1D1EB23900D6C439 /* Main.storyboard */,
 				B7F0238F1D1EB23900D6C439 /* LaunchScreen.storyboard */,
 				B7F023921D1EB23900D6C439 /* Info.plist */,
+				306CEEE21D49949B0094F1E1 /* 04B_19__.TTF */,
+				306CEEE31D49949B0094F1E1 /* Assets.xcassets */,
+				306CEEE41D49949B0094F1E1 /* ColorModel.swift */,
+				306CEEE51D49949B0094F1E1 /* RCScene.sks */,
+				306CEEE61D49949B0094F1E1 /* RCScene.swift */,
+				306CEEE71D49949B0094F1E1 /* RCViewController.swift */,
+				306CEEE81D49949B0094F1E1 /* SquareScene.sks */,
+				306CEEE91D49949B0094F1E1 /* SquareScene.swift */,
 				B7270D171D1EB35500F8FC88 /* Sprites.atlas */,
 				B7270D151D1EB34200F8FC88 /* Sounds */,
 				B7270D191D1EB39900F8FC88 /* Images.xcassets */,
@@ -277,9 +301,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306CEEF01D49949B0094F1E1 /* SquareScene.sks in Resources */,
 				B7270D161D1EB34200F8FC88 /* Sounds in Resources */,
+				306CEEEA1D49949B0094F1E1 /* 04B_19__.TTF in Resources */,
 				B7270D1A1D1EB39900F8FC88 /* Images.xcassets in Resources */,
 				B7F023911D1EB23900D6C439 /* LaunchScreen.storyboard in Resources */,
+				306CEEEB1D49949B0094F1E1 /* Assets.xcassets in Resources */,
+				306CEEED1D49949B0094F1E1 /* RCScene.sks in Resources */,
 				B7270D181D1EB35500F8FC88 /* Sprites.atlas in Resources */,
 				B7F0238C1D1EB23900D6C439 /* Main.storyboard in Resources */,
 			);
@@ -292,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306CEEEC1D49949B0094F1E1 /* ColorModel.swift in Sources */,
 				B7270D321D1EBFB100F8FC88 /* Swiftris.swift in Sources */,
 				B718E2261D3BF71D000D4315 /* CalibrationViewController.swift in Sources */,
 				B7F023871D1EB23900D6C439 /* GameScene.swift in Sources */,
@@ -300,8 +329,11 @@
 				B7270D2B1D1EBFB100F8FC88 /* Block.swift in Sources */,
 				B7F023891D1EB23900D6C439 /* GameViewController.swift in Sources */,
 				B7270D2F1D1EBFB100F8FC88 /* Shape.swift in Sources */,
+				306CEEF11D49949B0094F1E1 /* SquareScene.swift in Sources */,
+				306CEEEF1D49949B0094F1E1 /* RCViewController.swift in Sources */,
 				B7270D2E1D1EBFB100F8FC88 /* LShape.swift in Sources */,
 				B7270D2C1D1EBFB100F8FC88 /* JShape.swift in Sources */,
+				306CEEEE1D49949B0094F1E1 /* RCScene.swift in Sources */,
 				B7270D311D1EBFB100F8FC88 /* SShape.swift in Sources */,
 				B718E2211D3BF4A6000D4315 /* Calibration.swift in Sources */,
 				B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */,

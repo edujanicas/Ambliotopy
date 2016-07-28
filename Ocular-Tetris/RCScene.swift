@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class RCScene: SKScene {
     var title = SKLabelNode()
     
     //Setup your scene here
