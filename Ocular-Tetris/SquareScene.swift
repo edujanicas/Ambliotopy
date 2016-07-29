@@ -93,7 +93,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         let firstBody = contact.bodyA
         let secondBody = contact.bodyB
-
+        
         //NOVO
         if firstBody.categoryBitMask == PhysicsCategory.square && secondBody.categoryBitMask == PhysicsCategory.circle || firstBody.categoryBitMask == PhysicsCategory.circle && secondBody.categoryBitMask == PhysicsCategory.square{
             if(square.fillColor == circle.fillColor){
@@ -115,24 +115,25 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         
+        if(square.name == "redSquare"){
+            square.fillColor = blueColor
+            square.strokeColor=blueColor
+            square.name = "blueSquare"
+        }
+        else{
+            square.fillColor = redColor
+            square.strokeColor = redColor
+            square.name = "redSquare"
+        }
+        
         for touch: AnyObject in touches {
             let positionOfTouch = touch.locationInNode(self)
-            if let node = nodeAtPoint(positionOfTouch) as? SKShapeNode {
-                //node.zRotation += 60
-                if(node.fillColor == redColor){
-                    node.fillColor = blueColor
-                    node.strokeColor=blueColor
-                }
-                else{
-                    node.fillColor = redColor
-                    node.strokeColor = redColor
-                }
-            }
             
             if (died == true){
                 if restartBTN.containsPoint(positionOfTouch){
                     restartScene()
-                }
+            }
+                
         }
     }
         
@@ -148,7 +149,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createSquareNode() -> SKShapeNode {
-        square.name = "defaultSquare"
+        square.name = "redSquare"
         square.fillColor = redColor
         square.strokeColor = redColor
         square.position = CGPointMake(self.frame.width / 2, 193.987) //NOVO
