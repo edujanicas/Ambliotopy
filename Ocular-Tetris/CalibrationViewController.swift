@@ -78,12 +78,12 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
     
     @IBAction func didEnd(sender: AnyObject) {
         if (flag == "blue") {
-            defaults.setInteger(blueLevel, forKey: "blueLevel")
+            defaults.setDouble(Double(Int(blueLevel)), forKey: "blueLevel")
             flag = "red"
             redLevel = 0
         }
         else {
-            defaults.setInteger(redLevel, forKey: "redLevel")
+            defaults.setDouble(Double(Int(redLevel)), forKey: "redLevel")
             calibrationDidEnd(calibration)
             navigationController?.popViewControllerAnimated(true)
         }

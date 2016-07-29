@@ -37,8 +37,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86U-yA-naO">
-                                <rect key="frame" x="337" y="859" width="95" height="81"/>
-                                <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <rect key="frame" x="208" y="813" width="86" height="86"/>
+                                <state key="normal" image="circularButton"/>
                                 <connections>
                                     <action selector="didEnd:" destination="Zhh-5R-8Gh" eventType="touchUpInside" id="9FN-4m-Lfd"/>
                                 </connections>
@@ -403,4 +403,7 @@
             <point key="canvasLocation" x="-825" y="1331"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circularButton" width="400" height="400"/>
+    </resources>
 </document>

@@ -112,8 +112,8 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidBegin(swiftris: Swiftris) {
-        blueLevelLabel.text = "\(blueLevel)"
-        redLevelLabel.text = "\(redLevel)"
+        blueLevelLabel.text = "\(Int(blueLevel))"
+        redLevelLabel.text = "\(Int(redLevel))"
         scoreLabel.text = "\(swiftris.score)"
         scene.tickLengthMillis = TickLengthLevelOne
         // The following is false when restarting a new game
@@ -136,8 +136,8 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidLevelUp(swiftris: Swiftris) {
-        blueLevelLabel.text = "\(blueLevel)"
-        redLevelLabel.text = "\(redLevel)"
+        blueLevelLabel.text = "\(Int(blueLevel))"
+        redLevelLabel.text = "\(Int(redLevel))"
         if scene.tickLengthMillis >= 100 {
             scene.tickLengthMillis -= 100
         } else if scene.tickLengthMillis > 50 {

@@ -13,12 +13,12 @@ var BlockSize:CGFloat = 40.0
 let TickLengthLevelOne = NSTimeInterval(600)
 let clock = Clock()
 
-let RedRed = 166.0
+let RedRed = 175.0
 let RedGreen = 0.0
-let RedBlue = 22.0
-let BlueRed = 2.0
-let BlueGreen = 36.0
-let BlueBlue = 100.0
+let RedBlue = 0.0
+let BlueRed = 0.0
+let BlueGreen = 150.0
+let BlueBlue = 215.0
 
 class GameScene: SKScene {
     

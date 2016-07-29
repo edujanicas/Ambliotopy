@@ -29,14 +29,14 @@ class Calibration {
     }
     
     func changeBlueContrast() {
-        blueLevel += 1
+        blueLevel += 0.5
         delegate?.calibrationWillLevelUp(self)
         shape = SquareShape(column:4, row:4, color:BlockColor.Blue, orientation:Orientation.random())
         delegate?.calibrationDidLevelUp(self)
     }
     
     func changeRedContrast() {
-        redLevel += 1
+        redLevel += 0.5
         delegate?.calibrationWillLevelUp(self)
         shape = SquareShape(column:4, row:4, color:BlockColor.Red, orientation:Orientation.random())
         delegate?.calibrationDidLevelUp(self)

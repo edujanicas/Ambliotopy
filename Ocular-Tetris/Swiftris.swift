@@ -12,8 +12,8 @@ let PreviewRow = 1
 let PointsPerLine = 10
 let LevelThreshold = 20
 
-var blueLevel = 1
-var redLevel = 1
+var blueLevel = 1.0
+var redLevel = 1.0
 
 let defaults = NSUserDefaults.standardUserDefaults()
 
@@ -40,8 +40,8 @@ class Swiftris {
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
         
         // Check for saved level on the system
-        let blueSavedLevel = defaults.integerForKey("blueLevel")
-        let redSavedLevel = defaults.integerForKey("redLevel")
+        let blueSavedLevel = defaults.doubleForKey("blueLevel")
+        let redSavedLevel = defaults.doubleForKey("redLevel")
         if blueSavedLevel > 0 {
             blueLevel = blueSavedLevel
             redLevel = redSavedLevel
@@ -150,22 +150,22 @@ class Swiftris {
         if removedLines.count == 0 {
             return ([], [])
         }
-        let pointsEarned = removedLines.count * PointsPerLine * ((blueLevel + redLevel) / 2)
+        let pointsEarned = removedLines.count * PointsPerLine * ((Int(blueLevel) + Int(redLevel)) / 2)
         score += pointsEarned
-        if score >= ((blueLevel + redLevel) / 2) * LevelThreshold {
+        if score >= ((Int(blueLevel) + Int(redLevel)) / 2) * LevelThreshold {
             if (blueLevel < 5 && blueLevel < redLevel) {
                 blueLevel += 1
-                defaults.setInteger(blueLevel, forKey: "blueLevel")
+                defaults.setDouble(blueLevel, forKey: "blueLevel")
             }
             else if (redLevel < 5 && redLevel < blueLevel) {
                 redLevel += 1
-                defaults.setInteger(redLevel, forKey: "redLevel")
+                defaults.setDouble(redLevel, forKey: "redLevel")
             }
             else if (blueLevel < 5 && blueLevel == redLevel) {
                 blueLevel += 1
                 redLevel += 1
-                defaults.setInteger(blueLevel, forKey: "blueLevel")
-                defaults.setInteger(redLevel, forKey: "redLevel")
+                defaults.setDouble(blueLevel, forKey: "blueLevel")
+                defaults.setDouble(redLevel, forKey: "redLevel")
             }
             // Save current level on the system
             delegate?.gameDidLevelUp(self)
