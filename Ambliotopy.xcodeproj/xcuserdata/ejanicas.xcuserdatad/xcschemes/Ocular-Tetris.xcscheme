@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-               BuildableName = "Ocular-Tetris.app"
-               BlueprintName = "Ocular-Tetris"
-               ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
+               BuildableName = "Ambliotopy.app"
+               BlueprintName = "Ambliotopy"
+               ReferencedContainer = "container:Ambliotopy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular-Tetris.app"
-            BlueprintName = "Ocular-Tetris"
-            ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
+            BuildableName = "Ambliotopy.app"
+            BlueprintName = "Ambliotopy"
+            ReferencedContainer = "container:Ambliotopy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular-Tetris.app"
-            BlueprintName = "Ocular-Tetris"
-            ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
+            BuildableName = "Ambliotopy.app"
+            BlueprintName = "Ambliotopy"
+            ReferencedContainer = "container:Ambliotopy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B7F0237E1D1EB23900D6C439"
-            BuildableName = "Ocular-Tetris.app"
-            BlueprintName = "Ocular-Tetris"
-            ReferencedContainer = "container:Ocular-Tetris.xcodeproj">
+            BuildableName = "Ambliotopy.app"
+            BlueprintName = "Ambliotopy"
+            ReferencedContainer = "container:Ambliotopy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

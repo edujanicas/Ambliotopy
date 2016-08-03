@@ -6,6 +6,8 @@
 //  Copyright (c) 2016 EN. All rights reserved.
 //
 
+// GameViewController will be responsible for handling user input and communicating between GameScene and a Swiftris.
+
 import UIKit
 import SpriteKit
 

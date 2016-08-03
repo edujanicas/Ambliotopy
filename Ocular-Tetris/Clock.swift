@@ -32,16 +32,14 @@ class Clock {
         }
         
         // If there was older data but not from the current day, we add the current day to the dictionary and start the gameTime
-        if (unwrapeDates[today] == nil) {
+        guard let unwrapeToday = unwrapeDates[today] else {
             dates?.updateValue(0, forKey: today)
             gameTime = 0
+            return
         }
-            
         // Else, the game was already played on the current day and gameTime is initialized as the ammount of time played
-        else {
-            gameTime = unwrapeDates[today] as! Int
-        }
-        
+        gameTime = unwrapeToday as! Int
+
     }
     
     func update() {
@@ -53,8 +51,6 @@ class Clock {
             gameTime += 1         // 1 second added to the gameTime
             dates?.updateValue(gameTime, forKey: today)
             defaults.setObject(dates, forKey: "dates") // Saves the game time for future use
-            print(dates!)
-            
         }
         
     }

@@ -120,7 +120,7 @@
 		B7270D271D1EBFB100F8FC88 /* Swiftris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiftris.swift; sourceTree = "<group>"; };
 		B7270D281D1EBFB100F8FC88 /* TShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShape.swift; sourceTree = "<group>"; };
 		B7270D291D1EBFB100F8FC88 /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
-		B79042F31D1F29580005948E /* Ocular-Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ocular-Tetris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79042F31D1F29580005948E /* Ambliotopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambliotopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A629C81D2EE6A400A01538 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		B7C1D05E1D2C713A0057A931 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		B7F023821D1EB23900D6C439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			children = (
 				B7C1D05E1D2C713A0057A931 /* Charts.xcodeproj */,
 				B7F023811D1EB23900D6C439 /* Ocular-Tetris */,
-				B79042F31D1F29580005948E /* Ocular-Tetris.app */,
+				B79042F31D1F29580005948E /* Ambliotopy.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B7F0237E1D1EB23900D6C439 /* Ocular-Tetris */ = {
+		B7F0237E1D1EB23900D6C439 /* Ambliotopy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7F023AB1D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ocular-Tetris" */;
+			buildConfigurationList = B7F023AB1D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ambliotopy" */;
 			buildPhases = (
 				B7F0237B1D1EB23900D6C439 /* Sources */,
 				B7F0237C1D1EB23900D6C439 /* Frameworks */,
@@ -219,9 +219,9 @@
 			dependencies = (
 				B7C1D0701D2C71460057A931 /* PBXTargetDependency */,
 			);
-			name = "Ocular-Tetris";
+			name = Ambliotopy;
 			productName = "Ocular-Tetris";
-			productReference = B79042F31D1F29580005948E /* Ocular-Tetris.app */;
+			productReference = B79042F31D1F29580005948E /* Ambliotopy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B7F0237A1D1EB23900D6C439 /* Build configuration list for PBXProject "Ocular-Tetris" */;
+			buildConfigurationList = B7F0237A1D1EB23900D6C439 /* Build configuration list for PBXProject "Ambliotopy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,7 +260,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				B7F0237E1D1EB23900D6C439 /* Ocular-Tetris */,
+				B7F0237E1D1EB23900D6C439 /* Ambliotopy */,
 			);
 		};
 /* End PBXProject section */
@@ -468,8 +468,9 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ocular;
-				PRODUCT_NAME = "Ocular-Tetris";
+				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ambliotopy;
+				PRODUCT_NAME = Ambliotopy;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -481,15 +482,16 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ocular;
-				PRODUCT_NAME = "Ocular-Tetris";
+				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ambliotopy;
+				PRODUCT_NAME = Ambliotopy;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B7F0237A1D1EB23900D6C439 /* Build configuration list for PBXProject "Ocular-Tetris" */ = {
+		B7F0237A1D1EB23900D6C439 /* Build configuration list for PBXProject "Ambliotopy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7F023A91D1EB23A00D6C439 /* Debug */,
@@ -498,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7F023AB1D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ocular-Tetris" */ = {
+		B7F023AB1D1EB23A00D6C439 /* Build configuration list for PBXNativeTarget "Ambliotopy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7F023AC1D1EB23A00D6C439 /* Debug */,

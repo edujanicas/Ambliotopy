@@ -6,6 +6,10 @@
 //  Copyright (c) 2016 EN. All rights reserved.
 //
 
+// GameScene will be responsible for displaying everything for Swiftris: 
+// It will render the blocks, the background, and the game board.
+// Furthermore, GameScene will be responsible for playing the sounds.
+
 import SpriteKit
 
 var BlockSize:CGFloat = 40.0
@@ -39,8 +43,13 @@ class GameScene: SKScene {
     override init(size: CGSize) {
         super.init(size: size)
         
-        // The size of each block is determined by the size of the view, diveded by the number of the columns of the game. The 6 extra columns are given only for aestetich reasons
+        // The size of each block is determined by the size of the view, divided by the number of the columns of the game. 
+        // The 6 extra columns are given only for aestetich reasons
         BlockSize = size.width / CGFloat(NumColumns + 6)
+        
+        
+        // (0, 0) in SpriteKit is the bottom-left corner. We will draw the gameboard from the top down so we anchor our game in the top-left corner of the screen: (0, 1.0). 
+        // We then create an SKSpriteNode capable of representing our background image and we add it to the scene.
         anchorPoint = CGPoint(x: 0, y: 1.0)
         
         let background = SKSpriteNode(color: UIColor.blackColor(), size: size)
