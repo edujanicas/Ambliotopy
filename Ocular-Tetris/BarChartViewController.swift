@@ -28,7 +28,7 @@ class BarChartViewController: UIViewController {
         var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+            let dataEntry = BarChartDataEntry(value: values[i] / 60, xIndex: i)
             dataEntries.append(dataEntry)
         }
         
