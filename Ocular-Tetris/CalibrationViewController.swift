@@ -15,7 +15,6 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
     
     var scene: GameScene!
     var calibration: Calibration!
-    var flag = "blue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +46,7 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
     }
     
     func didTick() {
-        if (flag == "blue") {
+        if (badEye == Eye.Left) {
             calibration.changeBlueContrast()
         } else {
             calibration.changeRedContrast()
@@ -77,16 +76,10 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
     }
     
     @IBAction func didEnd(sender: AnyObject) {
-        if (flag == "blue") {
-            defaults.setDouble(Double(Int(blueLevel)), forKey: "blueLevel")
-            flag = "red"
-            redLevel = 0
-        }
-        else {
-            defaults.setDouble(Double(Int(redLevel)), forKey: "redLevel")
-            calibrationDidEnd(calibration)
-            navigationController?.popViewControllerAnimated(true)
-        }
+
+        defaults.setDouble(contrast, forKey: "contrast")
+        calibrationDidEnd(calibration)
+        navigationController?.popViewControllerAnimated(true)
         
     }
 }

@@ -18,6 +18,7 @@
 		B707BE4C1D2C70BF00B9226A /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */; };
 		B718E2211D3BF4A6000D4315 /* Calibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718E2201D3BF4A6000D4315 /* Calibration.swift */; };
 		B718E2261D3BF71D000D4315 /* CalibrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */; };
+		B72617571D53BAAC00D9AE35 /* EyeSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72617561D53BAAC00D9AE35 /* EyeSelectorViewController.swift */; };
 		B7270D161D1EB34200F8FC88 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = B7270D151D1EB34200F8FC88 /* Sounds */; };
 		B7270D181D1EB35500F8FC88 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B7270D171D1EB35500F8FC88 /* Sprites.atlas */; };
 		B7270D1A1D1EB39900F8FC88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7270D191D1EB39900F8FC88 /* Images.xcassets */; };
@@ -106,6 +107,7 @@
 		B707BE4B1D2C70BF00B9226A /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		B718E2201D3BF4A6000D4315 /* Calibration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calibration.swift; sourceTree = "<group>"; };
 		B718E2251D3BF71D000D4315 /* CalibrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibrationViewController.swift; sourceTree = "<group>"; };
+		B72617561D53BAAC00D9AE35 /* EyeSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeSelectorViewController.swift; sourceTree = "<group>"; };
 		B7270D151D1EB34200F8FC88 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		B7270D171D1EB35500F8FC88 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Sprites.atlas; path = ../Sprites.atlas; sourceTree = "<group>"; };
 		B7270D191D1EB39900F8FC88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				B7270D231D1EBFB100F8FC88 /* LShape.swift */,
 				B7270D241D1EBFB100F8FC88 /* Shape.swift */,
 				B7A629C81D2EE6A400A01538 /* Clock.swift */,
+				B72617561D53BAAC00D9AE35 /* EyeSelectorViewController.swift */,
 				B7270D251D1EBFB100F8FC88 /* SquareShape.swift */,
 				B7270D261D1EBFB100F8FC88 /* SShape.swift */,
 				B7270D271D1EBFB100F8FC88 /* Swiftris.swift */,
@@ -341,6 +344,7 @@
 				B7270D331D1EBFB100F8FC88 /* TShape.swift in Sources */,
 				B7270D301D1EBFB100F8FC88 /* SquareShape.swift in Sources */,
 				B7270D2D1D1EBFB100F8FC88 /* LineShape.swift in Sources */,
+				B72617571D53BAAC00D9AE35 /* EyeSelectorViewController.swift in Sources */,
 				B707BE4C1D2C70BF00B9226A /* BarChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

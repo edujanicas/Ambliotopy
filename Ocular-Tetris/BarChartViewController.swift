@@ -41,6 +41,7 @@ class BarChartViewController: UIViewController {
         barChartView.xAxis.labelPosition = .Bottom
         barChartView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        
         let ll = ChartLimitLine(limit: 60.0, label: "Target")
         barChartView.rightAxis.addLimitLine(ll)
     }

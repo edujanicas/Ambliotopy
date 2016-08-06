@@ -12,8 +12,7 @@ let PreviewRow = 1
 let PointsPerLine = 10
 let LevelThreshold = 20
 
-var blueLevel = 1.0
-var redLevel = 1.0
+var contrast = 1.0
 
 let defaults = NSUserDefaults.standardUserDefaults()
 
@@ -40,12 +39,20 @@ class Swiftris {
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
         
         // Check for saved level on the system
-        let blueSavedLevel = defaults.doubleForKey("blueLevel")
-        let redSavedLevel = defaults.doubleForKey("redLevel")
-        if blueSavedLevel > 0 {
-            blueLevel = blueSavedLevel
-            redLevel = redSavedLevel
+        let savedContrast = defaults.doubleForKey("contrast")
+        let badSavedEye = defaults.integerForKey("badEye")
+        
+        if savedContrast > 0 {
+            contrast = savedContrast
         }
+        
+        // 1 == LEFT // 2 == RIGHT
+        if badSavedEye == 1 {
+            badEye = Eye.Left
+        } else {
+            badEye = Eye.Right
+        }
+        
     }
     
     func beginGame() {
@@ -110,6 +117,10 @@ class Swiftris {
     
     func endGame() {
         score = 0
+        contrast /= 0.9
+        contrast /= 0.9
+        
+        if contrast > 1 { contrast = 1 }
         delegate?.gameDidEnd(self)
     }
     
@@ -150,23 +161,12 @@ class Swiftris {
         if removedLines.count == 0 {
             return ([], [])
         }
-        let pointsEarned = removedLines.count * PointsPerLine * ((Int(blueLevel) + Int(redLevel)) / 2)
+        let pointsEarned = removedLines.count * PointsPerLine * Int(contrast)
         score += pointsEarned
-        if score >= ((Int(blueLevel) + Int(redLevel)) / 2) * LevelThreshold {
-            if (blueLevel < 5 && blueLevel < redLevel) {
-                blueLevel += 1
-                defaults.setDouble(blueLevel, forKey: "blueLevel")
-            }
-            else if (redLevel < 5 && redLevel < blueLevel) {
-                redLevel += 1
-                defaults.setDouble(redLevel, forKey: "redLevel")
-            }
-            else if (blueLevel < 5 && blueLevel == redLevel) {
-                blueLevel += 1
-                redLevel += 1
-                defaults.setDouble(blueLevel, forKey: "blueLevel")
-                defaults.setDouble(redLevel, forKey: "redLevel")
-            }
+        if score >= Int(contrast) * LevelThreshold {
+            contrast *= 0.9
+            defaults.setDouble(contrast, forKey: "contrast")
+
             // Save current level on the system
             delegate?.gameDidLevelUp(self)
         }

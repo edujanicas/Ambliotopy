@@ -230,14 +230,16 @@ class GameScene: SKScene {
         
         switch color {
         case "blue":
-            let r = BlueRed + ((BlueRed + RedRed) * (Double(blueLevel) * 0.1))
-            let g = BlueGreen - ((BlueGreen + RedGreen)  * (Double(blueLevel) * 0.1))
-            let b = BlueBlue - ((BlueBlue + RedBlue) * (Double(blueLevel) * 0.1))
+            let r = BlueRed * contrast + RedRed * -(contrast - 1.0)
+            let g = BlueGreen * contrast + RedGreen * -(contrast - 1.0)
+            let b = BlueBlue * contrast + RedBlue * -(contrast - 1.0)
+            print(r, g, b)
             return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         case "red":
-            let r = RedRed - ((RedRed + BlueRed) * (Double(redLevel) * 0.1))
-            let g = RedGreen + ((RedGreen + BlueGreen) * (Double(redLevel) * 0.1))
-            let b = RedBlue + ((RedBlue + BlueBlue) * (Double(redLevel) * 0.1))
+            let r = RedRed * contrast + BlueRed * -(contrast - 1.0)
+            let g = RedGreen * contrast + BlueGreen * -(contrast - 1.0)
+            let b = RedBlue * contrast + BlueBlue * -(contrast - 1.0)
+            print(r, g, b)
             return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         default:
             return UIColor.blackColor()
