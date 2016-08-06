@@ -1,20 +1,4 @@
-import Foundation
-
-let NumColumns = 10
-let NumRows = 20
-
-let StartingColumn = 4
-let StartingRow = 0
-
-let PreviewColumn = 12
-let PreviewRow = 1
-
-let PointsPerLine = 10
-let LevelThreshold = 20
-
-var contrast = 1.0
-
-let defaults = NSUserDefaults.standardUserDefaults()
+import SpriteKit
 
 protocol SwiftrisDelegate {
     func gameDidEnd(swiftris: Swiftris)
@@ -39,12 +23,8 @@ class Swiftris {
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
         
         // Check for saved level on the system
-        let savedContrast = defaults.doubleForKey("contrast")
+        contrast.loadContrast()
         let badSavedEye = defaults.integerForKey("badEye")
-        
-        if savedContrast > 0 {
-            contrast = savedContrast
-        }
         
         // 1 == LEFT // 2 == RIGHT
         if badSavedEye == 1 {
@@ -117,10 +97,7 @@ class Swiftris {
     
     func endGame() {
         score = 0
-        contrast /= 0.9
-        contrast /= 0.9
-        
-        if contrast > 1 { contrast = 1 }
+
         delegate?.gameDidEnd(self)
     }
     
@@ -161,11 +138,11 @@ class Swiftris {
         if removedLines.count == 0 {
             return ([], [])
         }
-        let pointsEarned = removedLines.count * PointsPerLine * Int(contrast)
+        let pointsEarned = removedLines.count * PointsPerLine * Int(contrast.getContrast())
         score += pointsEarned
-        if score >= Int(contrast) * LevelThreshold {
-            contrast *= 0.9
-            defaults.setDouble(contrast, forKey: "contrast")
+        if score >= Int(contrast.getContrast()) * LevelThreshold {
+            contrast.decreaseContrast()
+            contrast.saveContrast()
 
             // Save current level on the system
             delegate?.gameDidLevelUp(self)

@@ -6,10 +6,7 @@
 //  Copyright (c) 2016 EN. All rights reserved.
 //
 
-import UIKit
 import SpriteKit
-
-let TickLengthCalibration = NSTimeInterval(3000)
 
 class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestureRecognizerDelegate {
     
@@ -77,7 +74,7 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
     
     @IBAction func didEnd(sender: AnyObject) {
 
-        defaults.setDouble(contrast, forKey: "contrast")
+        contrast.saveContrast()
         calibrationDidEnd(calibration)
         navigationController?.popViewControllerAnimated(true)
         

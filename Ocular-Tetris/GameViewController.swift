@@ -8,7 +8,6 @@
 
 // GameViewController will be responsible for handling user input and communicating between GameScene and a Swiftris.
 
-import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognizerDelegate {

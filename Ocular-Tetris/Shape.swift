@@ -1,7 +1,5 @@
 import SpriteKit
 
-let NumOrientations: UInt32 = 4
-
 enum Orientation: Int, CustomStringConvertible {
     case Zero = 0, Ninety, OneEighty, TwoSeventy
     

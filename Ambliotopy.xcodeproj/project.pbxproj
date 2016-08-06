@@ -41,6 +41,8 @@
 		B7F023891D1EB23900D6C439 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F023881D1EB23900D6C439 /* GameViewController.swift */; };
 		B7F0238C1D1EB23900D6C439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238A1D1EB23900D6C439 /* Main.storyboard */; };
 		B7F023911D1EB23900D6C439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F0238F1D1EB23900D6C439 /* LaunchScreen.storyboard */; };
+		B7FDECE31D561D5F003F7D96 /* Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDECE21D561D5F003F7D96 /* Contrast.swift */; };
+		B7FDECE81D562186003F7D96 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FDECE71D562186003F7D96 /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		B7F0238B1D1EB23900D6C439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7F023901D1EB23900D6C439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7F023921D1EB23900D6C439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FDECE21D561D5F003F7D96 /* Contrast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contrast.swift; sourceTree = "<group>"; };
+		B7FDECE71D562186003F7D96 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +177,13 @@
 				B7270D1F1D1EBFB100F8FC88 /* Array2D.swift */,
 				B7270D201D1EBFB100F8FC88 /* Block.swift */,
 				B7270D211D1EBFB100F8FC88 /* JShape.swift */,
+				B7FDECE71D562186003F7D96 /* GlobalVariables.swift */,
 				B7270D221D1EBFB100F8FC88 /* LineShape.swift */,
 				B7270D231D1EBFB100F8FC88 /* LShape.swift */,
 				B7270D241D1EBFB100F8FC88 /* Shape.swift */,
 				B7A629C81D2EE6A400A01538 /* Clock.swift */,
 				B72617561D53BAAC00D9AE35 /* EyeSelectorViewController.swift */,
+				B7FDECE21D561D5F003F7D96 /* Contrast.swift */,
 				B7270D251D1EBFB100F8FC88 /* SquareShape.swift */,
 				B7270D261D1EBFB100F8FC88 /* SShape.swift */,
 				B7270D271D1EBFB100F8FC88 /* Swiftris.swift */,
@@ -337,6 +343,7 @@
 				B7270D2E1D1EBFB100F8FC88 /* LShape.swift in Sources */,
 				B7270D2C1D1EBFB100F8FC88 /* JShape.swift in Sources */,
 				306CEEEE1D49949B0094F1E1 /* RCScene.swift in Sources */,
+				B7FDECE81D562186003F7D96 /* GlobalVariables.swift in Sources */,
 				B7270D311D1EBFB100F8FC88 /* SShape.swift in Sources */,
 				B718E2211D3BF4A6000D4315 /* Calibration.swift in Sources */,
 				B7F023831D1EB23900D6C439 /* AppDelegate.swift in Sources */,
@@ -346,6 +353,7 @@
 				B7270D2D1D1EBFB100F8FC88 /* LineShape.swift in Sources */,
 				B72617571D53BAAC00D9AE35 /* EyeSelectorViewController.swift in Sources */,
 				B707BE4C1D2C70BF00B9226A /* BarChartViewController.swift in Sources */,
+				B7FDECE31D561D5F003F7D96 /* Contrast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,18 +12,6 @@
 
 import SpriteKit
 
-var BlockSize:CGFloat = 40.0
-
-let TickLengthLevelOne = NSTimeInterval(600)
-let clock = Clock()
-
-let RedRed = 175.0
-let RedGreen = 0.0
-let RedBlue = 0.0
-let BlueRed = 0.0
-let BlueGreen = 150.0
-let BlueBlue = 215.0
-
 class GameScene: SKScene {
     
     var tick:(() -> ())?
@@ -114,7 +102,7 @@ class GameScene: SKScene {
         for block in shape.blocks {
             
             // Determines color of the block
-            let color = getUIColor(block.spriteName)
+            let color = contrast.getUIColor(block.spriteName)
             
             let sprite = SKSpriteNode(color: color, size: CGSizeMake(BlockSize - 10, BlockSize - 10))
             sprite.position = pointForColumn(block.column, row: block.row - 2)
@@ -226,25 +214,4 @@ class GameScene: SKScene {
         runAction(SKAction.waitForDuration(longestDuration), completion:completion)
     }
     
-    func getUIColor(color: String) -> UIColor {
-        
-        switch color {
-        case "blue":
-            let r = BlueRed * contrast + RedRed * -(contrast - 1.0)
-            let g = BlueGreen * contrast + RedGreen * -(contrast - 1.0)
-            let b = BlueBlue * contrast + RedBlue * -(contrast - 1.0)
-            print(r, g, b)
-            return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
-        case "red":
-            let r = RedRed * contrast + BlueRed * -(contrast - 1.0)
-            let g = RedGreen * contrast + BlueGreen * -(contrast - 1.0)
-            let b = RedBlue * contrast + BlueBlue * -(contrast - 1.0)
-            print(r, g, b)
-            return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
-        default:
-            return UIColor.blackColor()
-        
-        }
-        
-    }
 }

@@ -6,9 +6,7 @@
 //  Copyright © 2016 EN. All rights reserved.
 //
 
-import UIKit
-
-var badEye: Eye?
+import SpriteKit
 
 enum Eye {
     case Left;

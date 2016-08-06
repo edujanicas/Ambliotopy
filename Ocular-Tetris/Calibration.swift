@@ -16,7 +16,7 @@ class Calibration {
     init() {
         shape = nil
         blockArray = Array2D<Block>(columns: NumColumns, rows: NumRows)
-        contrast = 1.0
+        contrast.resetContrast()
     }
     
     func beginCalibration() {
@@ -36,14 +36,14 @@ class Calibration {
     }
     
     func changeBlueContrast() {
-        contrast *= 0.9
+        contrast.increaseContrast()
         delegate?.calibrationWillLevelUp(self)
         shape = SquareShape(column:4, row:4, color:BlockColor.Blue, orientation:Orientation.random())
         delegate?.calibrationDidLevelUp(self)
     }
     
     func changeRedContrast() {
-        contrast *= 0.9
+        contrast.increaseContrast()
         delegate?.calibrationWillLevelUp(self)
         shape = SquareShape(column:4, row:4, color:BlockColor.Red, orientation:Orientation.random())
         delegate?.calibrationDidLevelUp(self)

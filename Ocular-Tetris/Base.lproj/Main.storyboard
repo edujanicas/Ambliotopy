@@ -285,61 +285,15 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsI-bG-vgU">
-                                <rect key="frame" x="648" y="612" width="100" height="100"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmy-Si-cFc">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bq-zk-oA0">
-                                        <rect key="frame" x="0.0" y="40" width="100" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="38J-ik-5SJ"/>
-                                    <constraint firstAttribute="width" constant="100" id="5zY-k3-K8E"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="C64-XS-nri" firstAttribute="width" secondItem="ZBk-9p-Ak2" secondAttribute="width" id="1fZ-SN-JE8"/>
                             <constraint firstItem="C64-XS-nri" firstAttribute="top" secondItem="ZBk-9p-Ak2" secondAttribute="bottom" constant="8" id="2Ji-zH-0f4"/>
                             <constraint firstItem="ZBk-9p-Ak2" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="70a-uD-xrO"/>
                             <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="C64-XS-nri" secondAttribute="bottom" constant="20" id="7vc-CI-4dj"/>
                             <constraint firstItem="C64-XS-nri" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="HOn-et-49W"/>
-                            <constraint firstItem="C64-XS-nri" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="KKH-EZ-e0t"/>
-                            <constraint firstItem="C64-XS-nri" firstAttribute="top" secondItem="ZBk-9p-Ak2" secondAttribute="bottom" constant="8" id="QqN-6U-qOu"/>
-                            <constraint firstAttribute="trailing" secondItem="lsI-bG-vgU" secondAttribute="trailing" constant="20" id="WxC-kI-DVQ"/>
-                            <constraint firstItem="C64-XS-nri" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="abd-61-uKb"/>
-                            <constraint firstItem="C64-XS-nri" firstAttribute="height" secondItem="ZBk-9p-Ak2" secondAttribute="height" id="bmg-YC-Lzr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZBk-9p-Ak2" secondAttribute="trailing" id="eVq-4q-ayr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZBk-9p-Ak2" secondAttribute="trailing" id="sbN-7F-SjD"/>
-                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="C64-XS-nri" secondAttribute="bottom" constant="20" id="tSO-eb-T0H"/>
-                            <constraint firstItem="ZBk-9p-Ak2" firstAttribute="top" secondItem="lsI-bG-vgU" secondAttribute="bottom" constant="20" id="zMO-h2-tQc"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="lsI-bG-vgU"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="tSO-eb-T0H"/>
-                                <exclude reference="eVq-4q-ayr"/>
-                                <exclude reference="sbN-7F-SjD"/>
-                                <exclude reference="1fZ-SN-JE8"/>
-                                <exclude reference="KKH-EZ-e0t"/>
-                                <exclude reference="QqN-6U-qOu"/>
-                                <exclude reference="abd-61-uKb"/>
-                                <exclude reference="bmg-YC-Lzr"/>
-                            </mask>
-                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="PKs-bx-fTs" appends="YES" id="u3x-JJ-ZVV"/>
                             <outletCollection property="gestureRecognizers" destination="7Pi-fP-oKR" appends="YES" id="8gj-ng-7E0"/>

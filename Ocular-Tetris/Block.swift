@@ -8,8 +8,6 @@
 
 import SpriteKit
 
-let NumberOfColors: UInt32 = 2
-
 enum BlockColor: Int, CustomStringConvertible {
     
     case Blue = 0, Red
