@@ -24,6 +24,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     let orangeColor = ColorModel().backgroundColor
     let increment = 1
     var score = Int()
+    var scoreLvl = 1
     var hightscore = Int()
     var scoreLbl = SKLabelNode() //NOVO
     var hightscoreLbl = SKLabelNode() //NOVO
@@ -103,10 +104,15 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
                     hightscore = score
                     hightscoreLbl.text = "\(hightscore)"
                 }
+                if (score % 10 == scoreLvl){
+                    Contrast().decreaseContrast()
+                    scoreLvl += 1
+                }
+
             }
             else{
                 died = true
-
+                Contrast().increaseContrast()
                 createrestartBTNNode()
             }
         }
@@ -116,13 +122,13 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
         
         if(square.name == "redSquare"){
-            square.fillColor = blueColor
-            square.strokeColor=blueColor
+            square.fillColor = Contrast().getUIColor("blue")
+            square.strokeColor = Contrast().getUIColor("blue")
             square.name = "blueSquare"
         }
         else{
-            square.fillColor = redColor
-            square.strokeColor = redColor
+            square.fillColor = Contrast().getUIColor("red")
+            square.strokeColor = Contrast().getUIColor("red")
             square.name = "redSquare"
         }
         
@@ -150,8 +156,8 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     
     func createSquareNode() -> SKShapeNode {
         square.name = "redSquare"
-        square.fillColor = redColor
-        square.strokeColor = redColor
+        square.fillColor = Contrast().getUIColor("red")
+        square.strokeColor = Contrast().getUIColor("red")
         square.position = CGPointMake(self.frame.width / 2, 193.987) //NOVO
         square.userInteractionEnabled = false
         

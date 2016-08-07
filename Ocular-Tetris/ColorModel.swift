@@ -10,26 +10,53 @@ import UIKit
 import GameKit
 
 struct ColorModel {
-    let colors = [
-        UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1.0),//RED
-        UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)//BLUE
-    ]
+//    let colors = [
+//        UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1.0),//RED
+//        UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)//BLUE
+//    ]
+//    
+//    let backgroundColor = UIColor(red: 255/255.0, green: 149/255.0, blue: 0/255.0, alpha: 1.0)//ORANGE
+//    
+//    func getRandomColor() -> UIColor{
+//        let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
+//        return colors[randomNumber]
+//    }
+//    
+//    func changeColor( oldcolor: UIColor) -> UIColor{
+//        var newcolor = oldcolor
+//        if(newcolor == colors[0]){
+//            newcolor=colors[1]
+//        }
+//        else{
+//            newcolor=colors[0]
+//        }
+//        return newcolor
+//    }
+    
+    let colors = ["red", "blue"]
     
     let backgroundColor = UIColor(red: 255/255.0, green: 149/255.0, blue: 0/255.0, alpha: 1.0)//ORANGE
     
     func getRandomColor() -> UIColor{
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
-        return colors[randomNumber]
+        let numerodaCor = colors[randomNumber]
+        let cor = Contrast().getUIColor(numerodaCor)
+        return cor
     }
     
-    func changeColor( oldcolor: UIColor) -> UIColor{
+    func changeColor(oldcolor: String) -> UIColor{
+
         var newcolor = oldcolor
         if(newcolor == colors[0]){
-            newcolor=colors[1]
+            newcolor = colors[1]
         }
         else{
             newcolor=colors[0]
         }
-        return newcolor
+        
+        let novacor = Contrast().getUIColor(newcolor)
+        
+        return novacor
     }
+    
 }
