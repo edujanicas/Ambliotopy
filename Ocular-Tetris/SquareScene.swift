@@ -33,6 +33,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     var died = Bool() //NOVO
     var restartBTN = SKSpriteNode(imageNamed: "play") //NOVO
     
+    
     func restartScene(){
         self.removeAllChildren()
         self.removeAllActions()
@@ -105,14 +106,12 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
                     hightscoreLbl.text = "\(hightscore)"
                 }
                 if (score % 10 == scoreLvl){
-                    Contrast().decreaseContrast()
                     scoreLvl += 1
                 }
 
             }
             else{
                 died = true
-                Contrast().increaseContrast()
                 createrestartBTNNode()
             }
         }
@@ -253,7 +252,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
         restartBTN.physicsBody?.affectedByGravity = false
         restartBTN.physicsBody?.dynamic = false
         
-        square.userInteractionEnabled = true
+        square.userInteractionEnabled = false
         square.fillColor = orangeColor
         square.strokeColor = orangeColor
         

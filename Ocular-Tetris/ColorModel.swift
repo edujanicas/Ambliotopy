@@ -35,12 +35,12 @@ struct ColorModel {
     
     let colors = ["red", "blue"]
     
-    let backgroundColor = UIColor(red: 255/255.0, green: 149/255.0, blue: 0/255.0, alpha: 1.0)//ORANGE
+    let backgroundColor = UIColor(red: ((175.0)/2)/255.0, green: ((150.0)/2)/255.0, blue: ((215.0)/2)/255.0, alpha: 1.0)
     
     func getRandomColor() -> UIColor{
         let randomNumber = GKRandomSource.sharedRandom().nextIntWithUpperBound(colors.count)
         let numerodaCor = colors[randomNumber]
-        let cor = Contrast().getUIColor(numerodaCor)
+        let cor = contrast.getUIColor(numerodaCor)
         return cor
     }
     
@@ -54,7 +54,7 @@ struct ColorModel {
             newcolor=colors[0]
         }
         
-        let novacor = Contrast().getUIColor(newcolor)
+        let novacor = contrast.getUIColor(newcolor)
         
         return novacor
     }
