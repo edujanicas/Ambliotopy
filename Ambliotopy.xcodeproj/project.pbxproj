@@ -480,7 +480,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ambliotopy;
+				PRODUCT_BUNDLE_IDENTIFIER = io.en.Ambliotopy;
 				PRODUCT_NAME = Ambliotopy;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -494,7 +494,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Ocular-Tetris/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EN.io.Ambliotopy;
+				PRODUCT_BUNDLE_IDENTIFIER = io.en.Ambliotopy;
 				PRODUCT_NAME = Ambliotopy;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

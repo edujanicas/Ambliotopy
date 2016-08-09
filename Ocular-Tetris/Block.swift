@@ -1,9 +1,9 @@
 //
 //  Block.swift
-//  Swiftris
+//  Ambliotopy
 //
-//  Created by Stan Idesis on 7/18/14.
-//  Copyright (c) 2014 Bloc. All rights reserved.
+//  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
+//  Copyright © 2016 EN. All rights reserved.
 //
 
 import SpriteKit

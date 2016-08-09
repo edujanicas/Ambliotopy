@@ -1,11 +1,10 @@
 //
 //  BarChartViewController.swift
-//  iOSChartsDemo
+//  Ambliotopy
 //
-//  Created by Joyce Echessa on 6/12/15.
-//  Copyright (c) 2015 Appcoda. All rights reserved.
+//  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
+//  Copyright © 2016 EN. All rights reserved.
 //
-//  Created with Dummy Data. TODO
 
 import UIKit
 import Charts
@@ -32,7 +31,7 @@ class BarChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Seconds played")
+        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Minutes played")
         let chartData = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
         barChartView.data = chartData
         

@@ -2,7 +2,7 @@
 //  EyeSelectorViewController.swift
 //  Ambliotopy
 //
-//  Created by Eduardo Janicas on 04/08/16.
+//  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
 //  Copyright © 2016 EN. All rights reserved.
 //
 

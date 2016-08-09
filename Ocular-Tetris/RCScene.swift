@@ -1,9 +1,9 @@
 //
 //  GameScene.swift
-//  RushColor
+//  Ambliotopy
 //
-//  Created by Nuno Henrique Sales Fernandes on 11/07/16.
-//  Copyright (c) 2016 Nuno Henrique Sales Fernandes. All rights reserved.
+//  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
+//  Copyright © 2016 EN. All rights reserved.
 //
 
 import SpriteKit

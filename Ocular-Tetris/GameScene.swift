@@ -1,9 +1,9 @@
 //
 //  GameScene.swift
-//  Ocular-Tetris
+//  Ambliotopy
 //
 //  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
-//  Copyright (c) 2016 EN. All rights reserved.
+//  Copyright © 2016 EN. All rights reserved.
 //
 
 // GameScene will be responsible for displaying everything for Swiftris: 

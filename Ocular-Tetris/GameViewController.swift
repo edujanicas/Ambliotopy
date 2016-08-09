@@ -1,9 +1,9 @@
 //
 //  GameViewController.swift
-//  Ocular-Tetris
+//  Ambliotopy
 //
 //  Created by Eduardo Janicas and Nuno Fernandes on 25/06/16.
-//  Copyright (c) 2016 EN. All rights reserved.
+//  Copyright © 2016 EN. All rights reserved.
 //
 
 // GameViewController will be responsible for handling user input and communicating between GameScene and a Swiftris.
