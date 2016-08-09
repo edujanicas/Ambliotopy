@@ -112,7 +112,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidBegin(swiftris: Swiftris) {
-        contrastLabel.text = "\(contrast)"
+        contrastLabel.text = "\(contrast.getContrast())"
         scoreLabel.text = "\(swiftris.score)"
         scene.tickLengthMillis = TickLengthLevelOne
         // The following is false when restarting a new game
