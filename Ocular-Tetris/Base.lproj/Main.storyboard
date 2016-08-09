@@ -148,7 +148,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4CW-Ao-YD2" kind="showDetail" action="showViewController:sender:" id="XHa-Fc-ag8"/>
+                                    <segue destination="4CW-Ao-YD2" kind="show" id="XHa-Fc-ag8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkC-QQ-GaU">
@@ -159,7 +159,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="showDetail" id="eXE-ip-xic"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" action="showDetailViewController:sender:" id="eXE-ip-xic"/>
                                 </connections>
                             </button>
                         </subviews>
