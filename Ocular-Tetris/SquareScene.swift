@@ -52,7 +52,7 @@ class SquareScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func didMoveToView(view: SKView) {
-        self.createScene()
+        self.restartScene()
     }
     
 //==================================================================================

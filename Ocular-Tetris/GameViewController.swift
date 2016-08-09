@@ -174,4 +174,6 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     func gameShapeDidMove(swiftris: Swiftris) {
         scene.redrawShape(swiftris.fallingShape!) {}
     }
+    
+    
 }

@@ -51,13 +51,11 @@ class Contrast {
             let r = BlueRed * contrast + RedRed * -(contrast - 1.0)
             let g = BlueGreen * contrast + RedGreen * -(contrast - 1.0)
             let b = BlueBlue * contrast + RedBlue * -(contrast - 1.0)
-            print(r, g, b)
             return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         case "red":
             let r = RedRed * contrast + BlueRed * -(contrast - 1.0)
             let g = RedGreen * contrast + BlueGreen * -(contrast - 1.0)
             let b = RedBlue * contrast + BlueBlue * -(contrast - 1.0)
-            print(r, g, b)
             return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
         default:
             return UIColor.blackColor()

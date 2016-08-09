@@ -70,7 +70,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-JF-h2b">
                                 <rect key="frame" x="0.0" y="64" width="768" height="480"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="Left" backgroundImage="LeftEye">
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Esquerdo" backgroundImage="LeftEye">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -81,7 +82,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDO-dw-leG">
                                 <rect key="frame" x="0.0" y="544" width="768" height="480"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="Right" backgroundImage="RightEye">
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Direito" backgroundImage="RightEye">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -122,7 +124,7 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fes-JG-L9M">
                                 <rect key="frame" x="0.0" y="544" width="768" height="240"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" title="Charts" backgroundImage="ChartsPreview">
+                                <state key="normal" title="Gráficos" backgroundImage="ChartsPreview">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -132,7 +134,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4C-NT-5BF">
                                 <rect key="frame" x="0.0" y="784" width="768" height="240"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" title="Calibration" backgroundImage="CalibrationPreview">
+                                <state key="normal" title="Calibração" backgroundImage="CalibrationPreview">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -146,7 +148,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4CW-Ao-YD2" kind="show" id="XHa-Fc-ag8"/>
+                                    <segue destination="4CW-Ao-YD2" kind="showDetail" action="showViewController:sender:" id="XHa-Fc-ag8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkC-QQ-GaU">
@@ -157,7 +159,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="eXE-ip-xic"/>
+                                    <segue destination="BV1-FR-VrT" kind="showDetail" id="eXE-ip-xic"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -330,7 +332,7 @@
             </objects>
             <point key="canvasLocation" x="215" y="146"/>
         </scene>
-        <!--Bar Chart View Controller-->
+        <!--Gráficos-->
         <scene sceneID="kkf-cP-3qF">
             <objects>
                 <viewController id="RZm-WW-bV6" customClass="BarChartViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
@@ -356,6 +358,13 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Gráficos" id="GTT-Oj-D2b">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0e5-f3-Oad">
+                            <connections>
+                                <action selector="saveChart:" destination="RZm-WW-bV6" id="gQK-Uc-GvO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="barChartView" destination="aQO-m1-g6B" id="X5J-Zd-vcy"/>

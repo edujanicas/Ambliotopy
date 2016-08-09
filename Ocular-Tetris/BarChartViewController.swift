@@ -31,7 +31,7 @@ class BarChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Minutes played")
+        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Minutos jogados")
         let chartData = BarChartData(xVals: dataPoints, dataSet: chartDataSet)
         barChartView.data = chartData
         
