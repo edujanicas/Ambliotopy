@@ -135,7 +135,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidLevelUp(swiftris: Swiftris) {
-        contrastLabel.text = "\(contrast)"
+        contrastLabel.text = "\(contrast.getContrast())"
         if scene.tickLengthMillis >= 100 {
             scene.tickLengthMillis -= 100
         } else if scene.tickLengthMillis > 50 {

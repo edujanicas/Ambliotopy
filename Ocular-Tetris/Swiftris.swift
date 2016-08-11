@@ -138,7 +138,7 @@ class Swiftris {
         if removedLines.count == 0 {
             return ([], [])
         }
-        let pointsEarned = removedLines.count * PointsPerLine * Int(contrast.getContrast())
+        let pointsEarned = removedLines.count * PointsPerLine
         score += pointsEarned
         if score >= Int(contrast.getContrast()) * LevelThreshold {
             contrast.decreaseContrast()

@@ -48,15 +48,24 @@ class Contrast {
         
         switch color {
         case "blue":
-            let r = BlueRed * contrast + RedRed * -(contrast - 1.0)
-            let g = BlueGreen * contrast + RedGreen * -(contrast - 1.0)
-            let b = BlueBlue * contrast + RedBlue * -(contrast - 1.0)
-            return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+            if (badEye == Eye.Left) {
+                let r = BlueRed * contrast + RedRed * -(contrast - 1.0)
+                let g = BlueGreen * contrast + RedGreen * -(contrast - 1.0)
+                let b = BlueBlue * contrast + RedBlue * -(contrast - 1.0)
+                return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+            } else {
+                return UIColor(red: CGFloat(BlueRed)/255.0, green: CGFloat(BlueGreen)/255.0, blue: CGFloat(BlueBlue)/255.0, alpha: 1.0)
+            }
         case "red":
-            let r = RedRed * contrast + BlueRed * -(contrast - 1.0)
-            let g = RedGreen * contrast + BlueGreen * -(contrast - 1.0)
-            let b = RedBlue * contrast + BlueBlue * -(contrast - 1.0)
-            return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+            if (badEye == Eye.Right) {
+                let r = RedRed * contrast + BlueRed * -(contrast - 1.0)
+                let g = RedGreen * contrast + BlueGreen * -(contrast - 1.0)
+                let b = RedBlue * contrast + BlueBlue * -(contrast - 1.0)
+                return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1.0)
+            } else {
+                return UIColor(red: CGFloat(RedRed)/255.0, green: CGFloat(RedGreen)/255.0, blue: CGFloat(RedBlue)/255.0, alpha: 1.0)
+
+            }
         default:
             return UIColor.blackColor()
             
