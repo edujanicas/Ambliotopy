@@ -30,12 +30,12 @@ class Contrast {
     }
     
     func decreaseContrast() {
-        contrast *= 0.9
+        contrast *= 0.95
     }
     
     func increaseContrast() {
-        contrast /= 0.9
-        contrast /= 0.9
+        contrast /= 0.95
+        contrast /= 0.95
         
         if contrast > 1 { contrast = 1 }
     }

@@ -97,7 +97,7 @@ class Swiftris {
     
     func endGame() {
         score = 0
-
+        contrast.increaseContrast()
         delegate?.gameDidEnd(self)
     }
     
@@ -140,7 +140,7 @@ class Swiftris {
         }
         let pointsEarned = removedLines.count * PointsPerLine
         score += pointsEarned
-        if score >= Int(contrast.getContrast()) * LevelThreshold {
+        if score >= LevelThreshold {
             contrast.decreaseContrast()
             contrast.saveContrast()
 

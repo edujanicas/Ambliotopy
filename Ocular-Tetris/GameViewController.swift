@@ -12,7 +12,7 @@ import SpriteKit
 
 class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognizerDelegate {
     
-    var scene: GameScene!
+    var scene: TetrisScene!
     var swiftris: Swiftris!
     
     var panPointReference:CGPoint?
@@ -29,7 +29,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         skView.multipleTouchEnabled = false
         
         // Create and configure the scene
-        scene = GameScene(size: skView.bounds.size)
+        scene = TetrisScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         
         scene.tick = didTick
@@ -42,7 +42,13 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         skView.presentScene(scene)
         
     }
-
+    
+    override func viewDidDisappear(animated: Bool) {
+        self.gameDidEnd(swiftris)
+        scene.removeAllChildren()
+        scene.removeFromParent()
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -112,7 +118,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidBegin(swiftris: Swiftris) {
-        contrastLabel.text = "\(contrast.getContrast())"
+        contrastLabel.text = "\(Int(contrast.getContrast() * 100))%"
         scoreLabel.text = "\(swiftris.score)"
         scene.tickLengthMillis = TickLengthLevelOne
         // The following is false when restarting a new game
@@ -135,7 +141,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
     }
     
     func gameDidLevelUp(swiftris: Swiftris) {
-        contrastLabel.text = "\(contrast.getContrast())"
+        contrastLabel.text = "\(Int(contrast.getContrast() * 100))%"
         if scene.tickLengthMillis >= 100 {
             scene.tickLengthMillis -= 100
         } else if scene.tickLengthMillis > 50 {
@@ -175,5 +181,20 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         scene.redrawShape(swiftris.fallingShape!) {}
     }
     
+    @IBAction func pauseGame() {
+        
+        scene.stopTicking()
+        
+        let alertController = UIAlertController(title: "Paused Game", message: nil, preferredStyle: .Alert)
+        let resumeAction = UIAlertAction(title: "Resume", style: .Default, handler: resumeGame)
+        
+        alertController.addAction(resumeAction)
+        presentViewController(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func resumeGame(handler: UIAlertAction) {
+        scene.startTicking()
+    }
     
 }

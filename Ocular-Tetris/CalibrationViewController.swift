@@ -10,7 +10,7 @@ import SpriteKit
 
 class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestureRecognizerDelegate {
     
-    var scene: GameScene!
+    var scene: TetrisScene!
     var calibration: Calibration!
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class CalibrationViewController: UIViewController, CalibrationDelegate, UIGestur
         skView.multipleTouchEnabled = false
         
         // Create and configure the scene
-        scene = GameScene(size: skView.bounds.size)
+        scene = TetrisScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         
         scene.tick = didTick

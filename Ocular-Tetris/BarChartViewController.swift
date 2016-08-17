@@ -38,7 +38,9 @@ class BarChartViewController: UIViewController {
         barChartView.descriptionText = ""
         chartDataSet.colors = [UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)]
         barChartView.xAxis.labelPosition = .Bottom
-        barChartView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
+        barChartView.xAxis.labelTextColor = UIColor.whiteColor()
+        barChartView.leftAxis.labelTextColor = UIColor.whiteColor()
+        barChartView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         
         let ll = ChartLimitLine(limit: 60.0, label: "Target")

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A286a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FFP-Pi-yKT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A294a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FFP-Pi-yKT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -12,9 +12,9 @@
             <objects>
                 <navigationController id="FFP-Pi-yKT" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ja-oz-OlV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="7Ja-oz-OlV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-1669" y="146"/>
         </scene>
-        <!--Calibration View Controller-->
+        <!--Calibração-->
         <scene sceneID="sWP-dx-B2E">
             <objects>
-                <viewController id="Zhh-5R-8Gh" customClass="CalibrationViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Calibração" id="Zhh-5R-8Gh" customClass="CalibrationViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fCK-7N-d31"/>
                         <viewControllerLayoutGuide type="bottom" id="XTy-a9-YmC"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="247" y="-1301"/>
         </scene>
-        <!--Eye Selector-->
+        <!--Escolha o seu olho mau-->
         <scene sceneID="dc6-mp-yYh">
             <objects>
-                <viewController title="Eye Selector" id="NnB-C8-TOx" customClass="EyeSelectorViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Escolha o seu olho mau" id="NnB-C8-TOx" customClass="EyeSelectorViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ag-Xc-m8U"/>
                         <viewControllerLayoutGuide type="bottom" id="J5T-As-VJt"/>
@@ -73,7 +73,7 @@
                                 <rect key="frame" x="0.0" y="64" width="768" height="480"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
-                                <state key="normal" title="Esquerdo" backgroundImage="LeftEye">
+                                <state key="normal" backgroundImage="LeftEye">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -85,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="544" width="768" height="480"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Direito" backgroundImage="RightEye">
+                                <state key="normal" backgroundImage="RightEye">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-831" y="-1314"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="PlC-PV-O08">
             <objects>
-                <viewController id="8r9-aK-LK0" sceneMemberID="viewController">
+                <viewController id="8r9-aK-LK0" customClass="MainMenuViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RyO-hh-Mc7"/>
                         <viewControllerLayoutGuide type="bottom" id="mSn-Yo-6Gv"/>
@@ -126,7 +126,7 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fes-JG-L9M">
                                 <rect key="frame" x="0.0" y="544" width="768" height="240"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" title="Gráficos" backgroundImage="ChartsPreview">
+                                <state key="normal" backgroundImage="ChartsP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -136,17 +136,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4C-NT-5BF">
                                 <rect key="frame" x="0.0" y="784" width="768" height="240"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" title="Calibração" backgroundImage="CalibrationPreview">
+                                <state key="normal" backgroundImage="CalibrationP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NnB-C8-TOx" kind="show" id="0qm-2H-3zr"/>
+                                    <segue destination="NnB-C8-TOx" kind="show" identifier="calibration" id="0qm-2H-3zr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvC-RQ-kBe">
                                 <rect key="frame" x="0.0" y="304" width="768" height="240"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" title="Rush Color" backgroundImage="RushPreview">
+                                <state key="normal" backgroundImage="ColorRushP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -157,7 +157,7 @@
                                 <rect key="frame" x="0.0" y="64" width="768" height="240"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" title="Tetris" backgroundImage="TetrisPreview">
+                                <state key="normal" backgroundImage="TetrisP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="-825" y="146"/>
         </scene>
-        <!--GameViewController-->
+        <!--Tetris-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController title="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tetris" id="BV1-FR-VrT" customClass="GameViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -204,16 +204,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C64-XS-nri">
-                                <rect key="frame" x="598" y="790" width="150" height="150"/>
+                                <rect key="frame" x="548" y="790" width="200" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-q6-Qk3">
-                                        <rect key="frame" x="0.0" y="90" width="150" height="60"/>
+                                        <rect key="frame" x="0.0" y="90" width="200" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-o7-Emm">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PONTUAÇÃO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-o7-Emm">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -234,7 +234,7 @@
                                     <constraint firstItem="ncL-o7-Emm" firstAttribute="leading" secondItem="C64-XS-nri" secondAttribute="leading" id="qzZ-BN-fLz"/>
                                     <constraint firstItem="ncL-o7-Emm" firstAttribute="top" secondItem="C64-XS-nri" secondAttribute="top" id="sq1-hN-aCV"/>
                                     <constraint firstAttribute="bottom" secondItem="o5t-q6-Qk3" secondAttribute="bottom" id="wgW-Ri-aJM"/>
-                                    <constraint firstAttribute="width" constant="150" id="znP-Nk-ObT"/>
+                                    <constraint firstAttribute="width" constant="200" id="znP-Nk-ObT"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -249,16 +249,16 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBk-9p-Ak2">
-                                <rect key="frame" x="598" y="632" width="150" height="150"/>
+                                <rect key="frame" x="548" y="632" width="200" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTRAST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybe-85-ZoX">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTRASTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybe-85-ZoX">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzd-hm-emo">
-                                        <rect key="frame" x="0.0" y="90" width="150" height="60"/>
+                                        <rect key="frame" x="0.0" y="90" width="200" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -277,7 +277,7 @@
                                     <constraint firstItem="Kzd-hm-emo" firstAttribute="leading" secondItem="ZBk-9p-Ak2" secondAttribute="leading" id="hhH-SQ-vPO"/>
                                     <constraint firstAttribute="trailing" secondItem="Kzd-hm-emo" secondAttribute="trailing" constant="17" id="i8s-T8-weh"/>
                                     <constraint firstAttribute="trailing" secondItem="Ybe-85-ZoX" secondAttribute="trailing" id="jnR-yh-Jkt"/>
-                                    <constraint firstAttribute="width" constant="150" id="ymM-Jk-jiu"/>
+                                    <constraint firstAttribute="width" constant="200" id="ymM-Jk-jiu"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -305,7 +305,13 @@
                         </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="7ji-wD-tcJ"/>
+                    <navigationItem key="navigationItem" title="Tetris" id="7ji-wD-tcJ">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="pause" id="DX0-te-jjD">
+                            <connections>
+                                <action selector="pauseGame" destination="BV1-FR-VrT" id="KEa-tm-IuB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="contrastLabel" destination="Kzd-hm-emo" id="WtI-mp-gTa"/>
@@ -334,10 +340,10 @@
             </objects>
             <point key="canvasLocation" x="215" y="146"/>
         </scene>
-        <!--Bar Chart View Controller-->
+        <!--Gráficos-->
         <scene sceneID="kkf-cP-3qF">
             <objects>
-                <viewController id="RZm-WW-bV6" customClass="BarChartViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Gráficos" id="RZm-WW-bV6" customClass="BarChartViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bMN-rQ-lZr"/>
                         <viewControllerLayoutGuide type="bottom" id="tY7-pJ-n2E"/>
@@ -351,7 +357,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tY7-pJ-n2E" firstAttribute="top" secondItem="aQO-m1-g6B" secondAttribute="bottom" id="JNE-dt-3zP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aQO-m1-g6B" secondAttribute="trailing" id="PKa-ib-yfH"/>
@@ -369,10 +375,10 @@
             </objects>
             <point key="canvasLocation" x="-825" y="1385"/>
         </scene>
-        <!--Rush Color View Controller-->
+        <!--Color Rush-->
         <scene sceneID="5U5-zH-4Al">
             <objects>
-                <viewController title="Rush Color View Controller" id="4CW-Ao-YD2" customClass="RCViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Color Rush" id="4CW-Ao-YD2" customClass="RCViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gki-7q-JgU"/>
                         <viewControllerLayoutGuide type="bottom" id="97S-Eg-Mag"/>
@@ -389,15 +395,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CalibrationPreview" width="718" height="360"/>
-        <image name="ChartsPreview" width="718" height="397"/>
-        <image name="LeftEye" width="1456" height="952"/>
-        <image name="RightEye" width="1456" height="952"/>
-        <image name="RushPreview" width="718" height="293"/>
-        <image name="TetrisPreview" width="718" height="352"/>
+        <image name="CalibrationP" width="768" height="258"/>
+        <image name="ChartsP" width="768" height="260"/>
+        <image name="ColorRushP" width="768" height="260"/>
+        <image name="LeftEye" width="768" height="514"/>
+        <image name="RightEye" width="768" height="514"/>
+        <image name="TetrisP" width="768" height="258"/>
         <image name="circularButton" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XYT-Qd-SLi"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
 </document>
