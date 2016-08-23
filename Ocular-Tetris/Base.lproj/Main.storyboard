@@ -145,13 +145,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvC-RQ-kBe">
                                 <rect key="frame" x="0.0" y="304" width="768" height="240"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
-                                <state key="normal" backgroundImage="ColorRushP">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="4CW-Ao-YD2" kind="show" id="XHa-Fc-ag8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkC-QQ-GaU">
                                 <rect key="frame" x="0.0" y="64" width="768" height="240"/>
@@ -375,29 +373,10 @@
             </objects>
             <point key="canvasLocation" x="-825" y="1385"/>
         </scene>
-        <!--Color Rush-->
-        <scene sceneID="5U5-zH-4Al">
-            <objects>
-                <viewController title="Color Rush" id="4CW-Ao-YD2" customClass="RCViewController" customModule="Ambliotopy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gki-7q-JgU"/>
-                        <viewControllerLayoutGuide type="bottom" id="97S-Eg-Mag"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uZr-AF-473" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oP6-7f-iVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="127" y="1353"/>
-        </scene>
     </scenes>
     <resources>
         <image name="CalibrationP" width="768" height="258"/>
         <image name="ChartsP" width="768" height="260"/>
-        <image name="ColorRushP" width="768" height="260"/>
         <image name="LeftEye" width="768" height="514"/>
         <image name="RightEye" width="768" height="514"/>
         <image name="TetrisP" width="768" height="258"/>

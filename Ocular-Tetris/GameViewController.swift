@@ -27,6 +27,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         // Configure the view.
         let skView = view as! SKView
         skView.multipleTouchEnabled = false
+        skView.showsFPS = true
         
         // Create and configure the scene
         scene = TetrisScene(size: skView.bounds.size)

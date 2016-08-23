@@ -18,7 +18,7 @@ class RCViewController: UIViewController {
 
         // Configure the view.
         let skView = self.view as! SKView
-        skView.showsFPS = false
+        skView.showsFPS = true
         skView.showsNodeCount = false
             
         /* Sprite Kit applies additional optimizations to improve rendering performance */
@@ -29,17 +29,14 @@ class RCViewController: UIViewController {
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        scene.removeAllChildren()
+        scene.removeFromParent()
+    }
 
     override func shouldAutorotate() -> Bool {
         return true
-    }
-
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
     }
 
     override func didReceiveMemoryWarning() {

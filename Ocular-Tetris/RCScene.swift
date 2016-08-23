@@ -23,20 +23,19 @@ class RCScene: SKScene, SKPhysicsContactDelegate {
     let blueColor = ColorModel().colors[1]
     let orangeColor = ColorModel().backgroundColor
     let increment = 1
-    var score = Int()
+    var score = 0
     var scoreLvl = 1
-    var hightscore = Int()
+    var hightscore = 0
     var scoreLbl = SKLabelNode() //NOVO
     var hightscoreLbl = SKLabelNode() //NOVO
     var circle = SKShapeNode(circleOfRadius: 40) //NOVO
     var square = SKShapeNode(rectOfSize: CGSize(width: 200, height: 200)) //NOVO
-    var died = Bool() //NOVO
+    var died = false //NOVO
     var restartBTN = SKSpriteNode(imageNamed: "play") //NOVO
     
     
     func restartScene(){
         self.removeAllChildren()
-        self.removeAllActions()
         died = false
         score = 0
         createScene()
@@ -63,7 +62,7 @@ class RCScene: SKScene, SKPhysicsContactDelegate {
     
     override init(size: CGSize) {
         super.init(size: size)
-        self.restartScene()
+        self.createScene()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -127,6 +126,8 @@ class RCScene: SKScene, SKPhysicsContactDelegate {
             }
             else{
                 died = true
+                print(died)
+                self.removeAllChildren()
                 createrestartBTNNode()
             }
         }
