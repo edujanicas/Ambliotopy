@@ -27,7 +27,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         // Configure the view.
         let skView = view as! SKView
         skView.multipleTouchEnabled = false
-        skView.showsFPS = true
+        skView.ignoresSiblingOrder = true
         
         // Create and configure the scene
         scene = TetrisScene(size: skView.bounds.size)
@@ -48,6 +48,7 @@ class GameViewController: UIViewController, SwiftrisDelegate, UIGestureRecognize
         self.gameDidEnd(swiftris)
         scene.removeAllChildren()
         scene.removeFromParent()
+        print("Disappear")
     }
     
     override func prefersStatusBarHidden() -> Bool {
